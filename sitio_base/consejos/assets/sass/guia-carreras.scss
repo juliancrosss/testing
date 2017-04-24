@@ -1,0 +1,220 @@
+@import "fonts";
+@import "variables";
+@import "mixin";
+
+/** BASE STYLES **/
+body, html{
+	background-color: $body-bg;
+	font-family: $font-antonio;
+	font-size: $font-size-base;
+	overflow-x:hidden; 
+	@include screen-small{
+		font-size: $font-size-small;
+	}
+}
+
+a, a:hover, a:focus{
+	outline: 0;
+	color: #333;
+}
+
+.top-wrapper{
+	.detail{
+		background-color: rgba(0, 0, 0, 0.5);
+		background-size: 100%;
+		border-top: 1px solid #fff;
+		width: 100%;
+		text-align: center;
+		padding-bottom: 0;
+		position: absolute;
+		z-index: 10;
+		.especial, .consejos{
+			color: white;
+			display: inline-block;
+			font-family: 'antonio', sans-serif;
+			font-size: 18px;
+			margin: 0;
+			a{
+				text-decoration: none;
+				color: #fff;
+				span{
+					position: relative;
+					&::after{
+						background-color: #fff;
+						content: '';
+						height: 2px;
+						width: 100%;
+						position: absolute;
+						top: 25px;
+						left: 0;
+					}
+				}
+			}
+		}
+		.logo{
+			display: inline-block;
+			vertical-align: middle;
+			margin: 10px 0;
+			width: 100px;
+		}
+	}
+	.title{
+		position: relative;
+		text-align: left;
+		h3{
+			bottom: 20px;
+			color: white;
+			font-family: 'antonio';
+			font-size: 49px;
+			line-height: 1.2;
+			position: absolute;
+			text-shadow: 2px 2px 7px #000;
+			bottom: 0px;
+		}	
+	}
+}
+
+.body-wrapper{
+	img{
+		position: absolute;
+	}
+	.introduction{
+		float: right;
+		font-family: 'nova', sans-serif; 
+		margin-top: 20px;
+		p{
+			margin-bottom: 15px; 
+		}
+	}
+	.carreras{
+		padding: 20px;
+		.ciudades{
+			background: rgba(255,255,255,0.7);
+			border: 1px solid #bebebe;
+			color: #333;
+			li{
+				a{
+					font-family: 'antonioL', sans-serif;
+					font-size: 19.9px;
+				}	
+			}
+			.titulo{
+				color: #000;
+				font-family: 'antonio', sans-serif;
+				font-size: 24.23px;
+				margin: 0 5px;
+				padding: 15px 15px 7px 15px;	
+			}
+		}
+	}
+	.contenido-carreras{
+		.subtitle{
+			color: #000;
+			font-family: 'antonio', sans-serif;
+			font-size: 24.23px;
+			padding: 15px 15px 7px 15px;
+			text-align: center; 
+		}
+		.detail{
+			font-size: 16px;
+			.contenido{
+				padding: 0;
+				margin-bottom: 5px;
+				.mes{
+					border-bottom: 1px solid $verde-tenis;
+					color: $verde-tenis;
+					padding: 10px 15px;
+				}
+				.dia, .carrera, .lugar{
+					padding: 10px 20px;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 44em){
+	
+	.top-wrapper{
+		background: #000;
+		.detail{
+			position: relative;
+			.especial, .consejos{
+				font-size: 16px;
+			}
+			.logo{
+				width: 80px;
+			}
+		}
+		.title{
+			h3{
+				font-size: 35px;
+			}
+		}
+	}
+	.body-wrapper{
+		.carreras{
+			.tabla-ciudades{
+				padding: 0;
+			}
+			.ciudades{
+				li{
+					a{
+						padding: 5px 15px;
+					}
+				}
+			}
+		}
+		img{
+			display: none;
+		}
+		.contenido-carreras{
+			.subtitle{
+				margin-bottom: 0;
+				padding-left: 0;
+				text-align: left;
+			}
+			.detail{
+				padding: 0;
+				.contenido{
+					padding: 0;
+					.mes{
+						margin: 0;
+						padding: 0 0 5px 0;
+					}
+					.info{
+						padding: 0;
+						.dia, .carrera, .lugar{
+							margin-bottom: 0;
+							padding: 7px 3px;
+						}
+					}
+				}				
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: 44.1em) and (max-width: 64em){
+	.top-wrapper{
+		background: #000;
+		.detail{
+			position: relative;
+		}
+	}
+
+	.body-wrapper{
+		img{
+			display: none;
+		}
+		.carreras{
+			.ciudades{
+				li{
+					a{
+
+					}
+				}
+			}
+		}
+	}
+}

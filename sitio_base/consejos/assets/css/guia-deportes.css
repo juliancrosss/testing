@@ -1,0 +1,104 @@
+@font-face { font-family: 'antonio'; src: url("../fonts/antonio/antonio-regular.eot"); src: url("../fonts/antonio/antonio-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/antonio/antonio-regular.woff2") format("woff2"), url("../fonts/antonio/antonio-regular.woff") format("woff"), url("../fonts/antonio/antonio-regular.ttf") format("truetype"), url("../fonts/antonio/antonio-regular.svg#antonio") format("svg"); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'playfair_displaybold'; src: url("../fonts/playfair/playfairdisplay-bold-webfont.eot"); src: url("../fonts/playfair/playfairdisplay-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/playfair/playfairdisplay-bold-webfont.woff2") format("woff2"), url("../fonts/playfair/playfairdisplay-bold-webfont.woff") format("woff"), url("../fonts/playfair/playfairdisplay-bold-webfont.ttf") format("truetype"), url("../fonts/playfair/playfairdisplay-bold-webfont.svg#playfair_displaybold") format("svg"); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'playfair_displayregular'; src: url("../fonts/playfair/playfairdisplay-regular-webfont.eot"); src: url("../fonts/playfair/playfairdisplay-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/playfair/playfairdisplay-regular-webfont.woff2") format("woff2"), url("../fonts/playfair/playfairdisplay-regular-webfont.woff") format("woff"), url("../fonts/playfair/playfairdisplay-regular-webfont.ttf") format("truetype"), url("../fonts/playfair/playfairdisplay-regular-webfont.svg#playfair_displayregular") format("svg"); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'nova'; src: url("../fonts/proximaNova/proxima_nova_reg.eot"); src: url("../fonts/proximaNova/proxima_nova_reg.eot?#iefix") format("embedded-opentype"), url("../fonts/proximaNova/proxima_nova_reg.woff2") format("woff2"), url("../fonts/proximaNova/proxima_nova_reg.woff") format("woff"), url("../fonts/proximaNova/proxima_nova_reg.ttf") format("truetype"), url("../fonts/proximaNova/proxima_nova_reg.svg#nova") format("svg"); font-weight: normal; font-style: normal; }
+.highlighted, .subsection__title { font-weight: bold; }
+
+.section-futbol { border: 2px solid #00b27a; }
+.section-futbol .section__title { color: #00b27a; text-transform: uppercase; }
+.section-futbol .button-section { border: 2px solid #00b27a; color: #00b27a; }
+.section-futbol .button-section:hover { text-decoration: none; background-color: #00b27a; color: white; }
+.section-futbol .image2 { max-width: 51%; }
+
+.section-outdoor { border: 2px solid #db6e36; }
+.section-outdoor .section__title { color: #db6e36; text-transform: uppercase; }
+.section-outdoor .button-section { border: 2px solid #db6e36; color: #db6e36; }
+.section-outdoor .button-section:hover { text-decoration: none; background-color: #db6e36; color: white; }
+.section-outdoor .image2 { max-width: 51%; }
+
+.section-ciclismo { border: 2px solid #63b3e7; }
+.section-ciclismo .section__title { color: #63b3e7; text-transform: uppercase; }
+.section-ciclismo .button-section { border: 2px solid #63b3e7; color: #63b3e7; }
+.section-ciclismo .button-section:hover { text-decoration: none; background-color: #63b3e7; color: white; }
+.section-ciclismo .image2 { left: 70px; position: absolute; top: -122px; width: 90%; z-index: 3; }
+@media (max-width: 768px) { .section-ciclismo .image2 { position: static; width: 100%; } }
+
+.section-tenis { border: 2px solid #c4dc00; }
+.section-tenis .section__title { color: #c4dc00; text-transform: uppercase; }
+.section-tenis .button-section { border: 2px solid #c4dc00; color: #c4dc00; }
+.section-tenis .button-section:hover { text-decoration: none; background-color: #c4dc00; color: white; }
+.section-tenis .image1 { position: absolute; max-width: 81%; top: -69px; }
+@media (max-width: 768px) { .section-tenis .image1 { position: static; width: 100%; } }
+.section-tenis .image2 { position: absolute; max-width: 84%; }
+@media (max-width: 768px) { .section-tenis .image2 { position: static; width: 100%; } }
+.section-tenis .paragraph2 { margin-top: 103px; }
+@media (max-width: 768px) { .section-tenis .paragraph2 { margin-top: auto; } }
+
+.section-basketball { border: 2px solid #d7403f; }
+.section-basketball .section__title { color: #d7403f; text-transform: uppercase; }
+.section-basketball .button-section { border: 2px solid #d7403f; color: #d7403f; }
+.section-basketball .button-section:hover { text-decoration: none; background-color: #d7403f; color: white; }
+.section-basketball .image2 { position: absolute; max-width: 46%; top: -200px; }
+@media (max-width: 768px) { .section-basketball .image2 { position: static; } }
+
+.section-skate { border: 2px solid #f5d152; }
+.section-skate .section__title { color: #f5d152; text-transform: uppercase; }
+.section-skate .button-section { border: 2px solid #f5d152; color: #f5d152; }
+.section-skate .button-section:hover { text-decoration: none; background-color: #f5d152; color: white; }
+.section-skate .paragraph1 { margin-bottom: 80px; }
+@media (max-width: 768px) { .section-skate .paragraph1 { margin-bottom: 0px; } }
+.section-skate .image1 { position: absolute; max-width: 91%; top: -88px; }
+@media (max-width: 768px) { .section-skate .image1 { position: static; } }
+.section-skate .image2 { position: absolute; max-width: 81%; top: -100px; }
+@media (max-width: 768px) { .section-skate .image2 { position: static; max-width: 100%; } }
+
+.section-training { border: 2px solid #e54068; }
+.section-training .section__title { color: #e54068; text-transform: uppercase; }
+.section-training .button-section { border: 2px solid #e54068; color: #e54068; }
+.section-training .button-section:hover { text-decoration: none; background-color: #e54068; color: white; }
+.section-training .image2 { position: absolute; max-width: 38%; top: -116px; display: inline-block; right: 100px; z-index: 2; }
+@media (max-width: 768px) { .section-training .image2 { position: static; display: block; margin: 0 auto; } }
+
+.section-running { border: 2px solid #4385a0; }
+.section-running .section__title { color: #4385a0; text-transform: uppercase; }
+.section-running .button-section { border: 2px solid #4385a0; color: #4385a0; }
+.section-running .button-section:hover { text-decoration: none; background-color: #4385a0; color: white; }
+.section-running .image2 { position: absolute; max-width: 38%; top: -60px; display: inline-block; z-index: 2; left: 100px; }
+@media (max-width: 768px) { .section-running .image2 { position: static; display: block; margin: 0 auto; } }
+
+.wrapper-header-deportes { margin-bottom: 20px; }
+.wrapper-header-deportes .header-guias { background-color: rgba(0, 0, 0, 0.5); background-size: 100%; border-top: 1px solid #fff; width: 100%; text-align: center; padding-bottom: 0; position: absolute; z-index: 10; }
+.wrapper-header-deportes .header-guias .especial, .wrapper-header-deportes .header-guias .consejos { color: white; display: inline-block; font-family: 'antonio', sans-serif; font-size: 18px; margin: 0; }
+.wrapper-header-deportes .header-guias .especial a, .wrapper-header-deportes .header-guias .consejos a { text-decoration: none; color: #fff; }
+.wrapper-header-deportes .header-guias .especial a span, .wrapper-header-deportes .header-guias .consejos a span { position: relative; }
+.wrapper-header-deportes .header-guias .especial a span::after, .wrapper-header-deportes .header-guias .consejos a span::after { background-color: #fff; content: ''; height: 2px; width: 100%; position: absolute; top: 25px; left: 0; }
+.wrapper-header-deportes .header-guias .logo { display: inline-block; vertical-align: middle; margin: 10px 0; width: 100px; }
+.wrapper-header-deportes .header-deportes { position: relative; }
+.wrapper-header-deportes .header-deportes h2 { bottom: 0; font-family: 'antonio'; font-size: 35px; color: white; margin-bottom: 0; position: absolute; text-shadow: 2px 2px 7px #000; }
+@media (max-width: 768px) { .wrapper-header-deportes .header-deportes h2 { font-size: 35px; } }
+
+.img-responsive { width: 100%; }
+
+.container { font-family: 'nova', sans-serif, arial; font-size: 16px; }
+
+.section { margin: 30px 30px 60px 30px; box-sizing: border-box; padding: 30px; position: relative; }
+@media (max-width: 768px) { .section { margin: 60px 5px 60px 5px; padding: 10px; } }
+.section .subsection { margin: 20px 0px; }
+.section .subsection-hidden { margin: 0px; }
+.section img { max-width: 100%; }
+.section:before { content: ''; background-color: white; position: relative; width: 80%; height: 20px; margin: 0 auto; top: -42px; }
+@media (max-width: 768px) { .section:before { top: -24px; } }
+.section:after { content: ''; background-color: white; position: relative; width: 80%; height: 20px; margin: 0 auto; top: 42px; }
+@media (max-width: 768px) { .section:after { top: 24px; } }
+.section .section__title { margin-top: -63px; z-index: 3; position: relative; margin-bottom: 30px; font-family: 'antonio', sans-serif; font-size: 4em; }
+.section .button-section { font-size: 16px; padding: 10px 40px; text-decoration: none; -webkit-transition: all .3s ease-in-out; transition: all .3s ease-in-out; position: relative; top: 54px; z-index: 2; }
+@media (max-width: 768px) { .section .button-section { top: 36px; } }
+.section .button-section:after { content: '>'; margin-left: 5px; }
+
+@media only screen and (min-width: 40.1em) and (max-width: 64em) { .section-ciclismo .image2 { left: 20px; top: 0; } }
+@media only screen and (max-width: 40em) { .wrapper-header-deportes { margin-bottom: 20px; }
+  .wrapper-header-deportes .header-guias { background-color: black; position: relative; }
+  .wrapper-header-deportes .header-guias .especial, .wrapper-header-deportes .header-guias .consejos { margin: 0; font-size: 17px; }
+  .wrapper-header-deportes .header-guias .especial a span::after, .wrapper-header-deportes .header-guias .consejos a span::after { top: 17px; }
+  .wrapper-header-deportes .header-guias .logo { width: 80px; }
+  .wrapper-header-deportes .header-deportes h2 { font-size: 30px; } }

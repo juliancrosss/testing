@@ -1,0 +1,128 @@
+@charset "UTF-8";
+@import "fonts";
+@import "slick";
+@import "variables";
+@import "mixin";
+
+/** BASE STYLES **/
+html, body {
+  color: #333;
+  background-color: $white;
+  font-family: 'Lato', sans-serif;
+  font-size: 100%;
+  font-weight: normal;
+  overflow-x:hidden;
+}
+
+*, *:hover, *:focus{outline: none;}
+a, a:hover, a:focus{outline: none;} 
+button, button:hover, button:focus{outline: none;} 
+img, img:hover, img:focus{outline: none;}
+
+.remodal{
+  max-width: 750px;
+  padding: 15px;
+}
+
+#wrapper-content{
+  background-image: url("../images/background-tenis.jpg?V=2017");
+  /* Full height */
+  height: 100%;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 40px;
+  padding-top: 30px;
+  .mod__nav{
+    background-color: black;
+    color: white;
+    position: relative;
+    width: 100%;
+    padding-top: 10px;
+    font-weight: 200;
+    .mod__nav_list{
+      ul{
+        a{
+          color: white;
+          font-weight: 200;
+        }
+      }
+      .mod__nav_list--spacing{
+        li{
+          a{
+            margin: 0 10px;
+          }
+        }
+      }
+    }
+  }
+  .mod__header{
+    .thumbnail{
+      border: 0 none;
+      box-shadow: none;
+      margin:0;
+      padding:0;
+    }
+    .caption {
+      width:100%;
+      bottom: .3rem;
+      position: absolute;
+      //background:#000;
+      //background: -webkit-linear-gradient(bottom, #000 40%, rgba(0, 0, 0, 0) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+      //background: -moz-linear-gradient(bottom, #000 40%, rgba(0, 0, 0, 0) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+      //background: -o-linear-gradient(bottom, #000 40%, rgba(0, 0, 0, 0) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+      //background: linear-gradient(to top, #000 40%, rgba(0, 0, 0, 0) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+      h2 {
+        background-color: black;
+        padding: 0 15px;
+        color: white;
+        -webkit-font-smoothing: antialiased;
+      }
+      span{
+        color: green;
+      }
+    }
+  }
+  .mod__categories{
+    padding-top: 20px;
+    .thumbnail{
+      border: 0 none;
+      box-shadow: none;
+      margin:0;
+      padding:0;
+      opacity: 0.9;
+      &:hover{
+        opacity: inherit;
+      }
+    }
+    .caption {
+      width:100%;
+      bottom: 18rem;
+      position: absolute;
+      h2 {
+        text-align: center;
+        padding: 0 11px;
+        color: white;
+        -webkit-font-smoothing: antialiased;
+      }
+      p{
+       color: white;
+       text-align: center;
+      }
+    }
+  }
+  .mod__products{
+    padding-top: 20px;
+    .mod__products_header{
+      padding: 20px 0px;
+      background-color: white;
+      color: gray;
+      h3{
+        font-weight: 200;
+      }
+    }
+  }
+}
+

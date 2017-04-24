@@ -1,0 +1,937 @@
+@import "fonts";
+@import "variables";
+@import "mixin";
+
+/** BASE STYLES **/
+body, html{
+	background-color: $body-bg;
+	font-family: $font-antonio;
+	font-size: $font-size-base;
+	overflow-x:hidden; 
+	@include screen-small{
+		font-size: $font-size-small;
+	}
+}
+
+a, a:hover, a:focus{
+	outline: 0;
+}
+
+#wrapper-head{
+	.content-header{
+		background: url(../images/header_tenis_full.png) no-repeat 0 0 transparent;
+		background-size: 100%;
+		border-top: 1px solid #fff;
+		padding-bottom: 20px;
+		position: relative;
+		text-align: center;
+		.especial, .consejos{
+			color: white;
+			display: inline-block;
+			font-family: 'antonio', sans-serif;
+			font-size: 24px;
+			margin: 70px 50px 0;
+			a{
+				text-decoration: none;
+				color: #fff;
+				span{
+					position: relative;
+					&::after{
+						background-color: #fff;
+						content: '';
+						height: 2px;
+						width: 100%;
+						position: absolute;
+						top: 25px;
+						left: 0;
+					}
+				}
+			}
+		}
+		.logo{
+			display: inline-block;
+			width: 160px;
+			vertical-align: middle;
+		}
+	}
+	.categories{
+		padding: 0;
+		.title{
+			color: $white;
+			font-family: 'antonio', sans-serif;
+			text-align: center;
+			text-transform: uppercase;
+			h2{
+				color: #1f2831;
+				font-size: 36px;
+				padding: 20px;
+				span{
+					color: $verde_tenis;
+				}
+			}
+		}
+		.tendencias{
+			padding: 0;
+			.wrapper-tend{
+				position: relative;
+				.tablet{
+					display: none;
+				}
+				.see-more{
+					background-color: rgba(255,255,255,0.6);
+					color: #0c2539;
+					left: 0;
+					margin: 0 auto;
+					padding: 10px;
+					position: absolute;
+					right: 0;
+					text-align: center;
+					bottom: 6%;
+					width: 70%;
+					p{
+						font-size: 22px;
+					}
+					a{
+						border: 1px solid #0c2539;
+						color: #0c2539;
+						font-size: 22px;
+						padding: 5px 20px;
+						text-decoration: none;
+						@include transition(.2s linear);
+						&:hover{
+							background-color: #0c2539;
+							color: $white;
+							padding: 8px 25px;
+						}
+					}
+				}
+			}
+		}
+		.corremos-punto{
+			padding: 0;
+			.box{
+				position: relative;
+				overflow: hidden;
+				margin-bottom: 25px;
+				img{
+					@include transition(all .5s linear);
+				}
+				.mask{
+					background-color: rgba(11,39,62,0.8);
+					position: absolute;
+					bottom: -77%;
+					left: 0;
+					height: 100%;
+					text-align: center;
+					color: $white;
+					font-family: 'antonioL', sans-serif;
+					padding: 10px;
+					width: 100%;
+					@include transition(all .2s ease-in-out);
+					.subtitle{
+						position: relative;
+						padding: 5px 0 15px 0;
+						h4{
+							font-size: 21px;
+							margin: 3px;	
+						}
+						p{
+							margin: 0 3px 10px;
+						}
+						&::after{
+							background-color: $white;
+							content: '';
+							height: 1px;
+							position: absolute;
+							left: 0;
+							right: 0;
+							margin: 0 auto;
+							bottom: 0;
+							width: 20%;
+						}
+					}
+					.text{
+						padding: 20px; 
+						p{
+							font-size: 14px;
+						}
+					}
+					span{
+						padding: 30px 0;
+						position: relative;
+						vertical-align: bottom;
+						color: $verde_tenis;
+						text-decoration: none;
+						&::after{
+							content: '>';
+							height: 15px;
+							line-height: 0;
+							position: relative;
+							right: -5px;
+							width: 15px;
+							@include transition(.2s linear);
+						}
+						&:hover{
+							&::after{
+								right: -8px;
+							}
+						}
+					}
+				}
+				&:hover{
+					img{
+						@include transform(scale(1.1));
+					}
+					.mask{
+						bottom: 0;
+					}
+				}
+				&.saber{
+					.mask{
+						bottom: -60%;
+						text-align: left;
+						.subtitle{
+							position: relative;
+							h4{
+								font-size: 32px;
+							}
+							p{
+								font-size: 17.5px;
+							}
+							&::after{
+								height: 0px;
+							}
+						}
+						span{
+							color: $verde_tenis;
+							right: 70px;
+							top: 10px;
+							position: absolute;
+							&::after{
+								padding-left: 5px;
+								content: '>';
+								height: 15px;
+								width: 15px;
+								position: relative;
+								right: -5px;
+								@include transition(.2s linear);
+							}
+							&:hover{
+								&::after{
+									right: -8px;
+								}
+							}
+						}
+					}
+					&:hover{
+						.mask{
+							bottom: -130px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.content-footer{
+	text-align: center;
+	.title{
+		font-family: 'antonio', sans-serif;
+		text-align: center;
+		margin: 35px 0;
+		h2{
+			text-transform: uppercase;
+			font-size: 31px;
+			span{
+				color: $verde_tenis;
+			}
+		}
+	}
+	.fitness{
+		margin-bottom: 80px;
+		.box-footer{
+			overflow: hidden;
+			position: relative;
+			.mask{
+				background-color: rgba(11,39,62,0.8);
+				text-align: left;
+				top: 160px;
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				left: 0;
+				span{
+					top: 13%;
+					position: absolute;
+					right: 50px;
+					color: $white;
+					font-size: 19px;
+					font-family: 'antonioL', sans-serif;
+					&::after{
+						padding-left: 5px;
+						content: '>';
+						height: 19px;
+						width: 19px;
+						position: relative;
+						right: -5px;
+						@include transition(.2s linear);
+					}
+					&:hover{
+						&::after{
+							right: -8px;
+						}
+					}
+					&:hover{
+						color: $verde_tenis;
+					}
+				}
+				p{
+					margin:15px;
+					color: $white;
+					font-size: 19px;
+					font-family: 'antonioL', sans-serif;
+					text-align: center;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 40.1em) and (max-width: 64em){
+	
+	.content{
+		width: 100%;
+		padding: 0; 
+	}
+	#wrapper-head{
+		.content-header{
+			padding-bottom: 0;
+			.volver{
+				left: 5px;
+			}
+			.especial, .consejos{
+				margin: 40px 50px 0;
+			}
+			.logo{
+				margin: 0 auto;
+				width: 18%;
+			}
+		}
+		.categories{
+			.tendencias{
+				.wrapper-tend{
+					width: 100%;
+					background-color: #fff;
+					.full{
+						display: none;
+					}
+					.tablet{
+						display: block;
+					}
+					.see-more{
+						width: 50%;
+						left: 48%;
+						margin: 0px;
+						right: 0px;
+						float: right;
+						top: 25%;
+						a{
+							font-size: 25px;
+							padding: 10px 20px 7px;
+							&:hover{
+								padding: 13px 20px 10px;
+							}
+						}
+						p{
+							font-size: 28px;
+						}
+					}
+				}
+			}
+			.corremos-punto{
+				.box{
+					img{
+						transition: none;
+					}
+					.mask{
+						bottom: -267px;
+						padding: 20px 10px;
+						@include transition(.2s linear);
+						.subtitle{
+							h4{
+								font-size: 28px;
+							}
+						}
+						.text{
+							padding: 80px 20px 20px 20px;
+							p{
+								font-size: 20px;
+							}
+						}
+						span{
+							font-size: 22px;
+							&::after{
+								top: -3px;
+							}
+						}
+						&:hover{
+							img{
+								@include transform(none);
+							}
+						}
+						
+					}
+				}
+				.box.saber{
+					margin-bottom: 0;
+					.mask{
+						bottom: -190px;
+						.subtitle{
+							h4{
+								font-size: 35px;
+								margin: 2px 15px;
+							}
+							p{
+								font-size: 23px;
+								margin: 2px 15px;
+							}
+						}
+						span{
+							font-size: 21px;
+							right: 100px;
+							top: 17px;
+							&::after{
+								top: -2px;
+							}
+						}
+						&:hover{
+							bottom: -190px;
+						}
+					}
+					&:hover{
+						.mask{
+							bottom: -190px;
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	.wrapper-footer{
+		.title{
+			padding: 0 8%;
+		}
+		.content{
+			padding-top: 1%;
+			.content-footer{
+				.fitness{
+					margin-bottom: 30px;
+					.fitness-blog{
+						margin-bottom: 20px;
+						padding: 0 15px;
+						.mask{
+							padding-top: 0;
+							top:65%;
+							span{
+								font-size: 23px;
+								top: 12%;
+								right: 10%;
+							}
+							img{
+								margin: 5px;
+							}
+						}
+					}
+					.fitness-tenis{
+						padding: 0 16px 0 0;
+						margin: 0;
+						.mask{
+							padding-top: 0;
+							top:65%;
+							p{
+								font-size: 28px;
+								margin: 25px 50px;
+							}
+						}
+					}
+					.fitness-runner{
+						padding: 0 16px 0 0;
+						.mask{
+							padding-top: 0;
+							top:65%;
+							p{
+								font-size: 28px;
+								margin: 25px 50px;
+							}
+						}
+					}
+				}
+			}
+		}	
+	}
+}
+
+@media screen and (min-width: 40.1em) and (max-width: 64em) and (orientation: landscape){
+	.content{
+		width: 100%;
+	}
+	#wrapper-head{
+		.content-header{
+			padding: 0 50px;
+		}
+		.categories{
+			padding: 0 4%; 
+			.tendencias{
+				.wrapper-tend{
+					.tablet{
+						display: none;
+					}
+					.full{
+						display: block;
+					}
+					.see-more{
+						width: 100%;
+						height: 120px;
+						left: 0;
+						margin: 0 auto;
+						right: 0;
+						top: 70%;
+						p{
+							font-size: 22px;
+						}
+						a{
+							font-size: 23px;
+							padding: 8px 15px 5px;
+							&:hover{
+								padding: 8px 15px 5px;
+							}
+						}
+					}	
+				}			
+			}
+			.corremos-punto{
+				.box{
+					.mask{
+						bottom: -145px;
+						padding: 10px;
+						.subtitle{
+							h4{
+								font-size: 16px;
+							}
+						}
+						.text{
+							padding: 15px 5px 5px;
+							p{
+								font-size: 13px;
+							}
+						}
+						span{
+							font-size: 14px;
+							&:after{
+								top: 0;
+							}
+						}
+					}
+				}
+				.box.saber{
+					margin-bottom: 25px;
+					.mask{
+						bottom: -100px;
+						.subtitle{
+							h4{
+								font-size: 25px;
+								margin: 3px 10px;
+							}
+							p{
+								font-size: 14px;
+								margin: 3px 10px;
+							}
+						}
+						span{
+							right: 50px;
+							top: 0px;
+							font-size: 16px;
+						}
+						&:hover{
+							bottom: -100px;
+						}
+					}
+					&:hover{
+						.mask{
+							bottom: -100px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.wrapper-footer{
+		padding: 0 4%;
+		.content{
+			padding-top: 1%;
+			.content-footer{
+				.fitness{
+					margin-bottom: 30px;
+					.fitness-blog{
+						width: 50%;
+						padding: 0 15px;
+						.box-footer{
+							height: 212px;
+						}
+						.mask{
+							padding-top: 0;
+							top:70%;
+							span{
+								font-size: 20px;
+								top: 10%;
+								right: 30px;
+							}
+							img{
+								margin: 0;
+							}
+						}
+					}
+					.fitness-tenis{
+						padding: 0 16px 0 0;
+						margin: 0;
+						.mask{
+							padding-top: 0;
+							top:70%;
+							p{
+								font-size: 18px;
+								margin: 10px;
+							}
+						}
+					}
+					.fitness-runner{
+						padding: 0 16px 0 0;
+						.mask{
+							padding-top: 0;
+							top:70%;
+							p{
+								font-size: 18px;
+								top: 40px;
+								margin: 10px;
+							}
+						}
+					}
+				}
+			}
+		}	
+	}
+}
+
+@media only screen and (max-width: 44em){
+	
+	#wrapper-head{
+		.content-header{
+			background: url(../images/header_tenis_mobile.png) no-repeat 0 0 transparent;
+			background-size: 100%;
+			padding-left: 3%;
+			padding-bottom: 0;
+			.especial, .consejos{
+				margin: 0;
+				font-size: 17px;
+				a{
+					span::after{
+						top: 17px;
+					}
+				}
+			}
+			.logo{
+				width: 80px;
+			}
+		}
+		.content{
+			width: 100%;
+			margin: 0;
+			padding: 0;
+		}
+		.categories{
+			.title{
+				h2{
+					font-size: 21px;
+					margin: 10px 0 5px 0;
+					padding: 0;
+				}
+			}
+			.tendencias{
+				.wrapper-tend{
+					width: 100%;
+					background-color: #fff;
+					.see-more{
+						width: 60%;
+						left: 35%;
+						top: 10%;
+						p{
+							font-size: 15px;
+							margin-bottom: 5px;
+						}
+						a{
+							padding: 5px 8px 1px 8px;
+							font-size: 15px;
+							&:hover{
+								padding: 5px 8px 1px 8px;
+								border: 1px solid #0c2539;
+								color: #0c2539;
+								background: $white;
+							}	
+						}
+
+					}
+				}
+			}
+			.corremos-punto{
+				.box-test{
+					padding-right: 2px;
+				}
+				.box-carreras{
+					padding-left: 2px;
+				}
+				.box{
+					margin-bottom: 4px;
+					.mask{
+						padding: 5% 0;
+						top: 63%;
+						.subtitle{
+							text-align: center;
+							padding-bottom: 0;
+							h4{
+								font-size: 14px;
+								margin: 0 0 5px 0;
+							}
+							&::after{
+								content: '';
+								height: 0;
+							}
+						}
+						.text{
+							display: none;
+						}
+						span{
+							padding: 0;
+							font-size: 12px;
+							&:hover{
+								&::after{
+									right: -5px;
+								}
+							}
+						}	
+					}
+					&.saber{
+						.mask{
+							top: 60%;
+							padding-top: 7px;
+							.subtitle{
+								text-align: left;
+								h4{
+									font-size: 23px;
+									margin: 0 6px;
+								}
+								p{
+									font-size: 14px;
+									margin: 0 6px 5px;
+								}
+							}
+							span{
+								right: 25px;
+								top: 18%;
+								font-size: 14px;
+								&:hover{
+									&::after{
+										right: -5px;
+									}
+								}
+							}
+						}
+					}
+				}
+			}			
+		}
+	}	
+
+	.content-footer{
+		.title{
+			margin: 10px;
+			h2{
+				margin: 0;
+				font-size: 20px;
+			}
+		}
+		.fitness{
+			margin-bottom: 40px;
+			.fitness-blog,.fitness-tenis, .fitness-runner{
+				padding: 0 2% 2%;
+			}
+			.fitness-blog{
+				padding-right: 0;
+				a{
+					display: block;
+					text-align: center;	
+				}
+				.box-footer{
+					.mask{
+						padding: 6%;
+						top: 60%;
+						span{
+							right: 20%;
+							top: 27%;
+						}
+					}
+				}
+			}
+			.fitness-tenis, .fitness-runner{
+				.box-footer{
+					.mask{
+						top: 65%;
+						p{
+							margin: 4% 0;
+							font-size: 18px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 44em) and (orientation: landscape){
+	
+	#wrapper-head{
+		.categories{
+			.tendencias{
+				.wrapper-tend{
+					background-color: #fff;
+					width: 80%;
+					margin: 0 auto;
+					.see-more{
+						top: 15%;
+						left: 36%;
+						p{
+							font-size: 16px;
+							margin-bottom: 10px;	
+						}
+						a{
+							padding: 6px 10px;
+							font-size: 16px;
+							&:hover{
+								padding: 6px 10px;
+							}
+						}
+					}
+				}
+			}
+			.corremos-punto{
+				.horz{
+					width: 80%;
+					margin: 0 auto;
+				}
+				.box{
+					margin-bottom: 25px;
+					.mask{
+						padding: 6px 0;
+						top: 70%;
+						.subtitle{
+							text-align: center;
+							padding-bottom: 0;
+							h4{
+								font-size: 17px;
+							}
+							&::after{
+								content: '';
+								height: 0;
+							}
+						}
+						.text{
+							display: none;
+						}
+						span{
+							padding: 0;
+							font-size: 13px;
+							&:hover{
+								&::after{
+									right: -5px;
+								}
+							}
+						}	
+					}
+					&.saber{
+						.mask{
+							top: 68%;
+							padding-top: 7px;
+							.subtitle{
+								text-align: left;
+								h4{
+									font-size: 20px;
+									margin: 0 15px 5px;
+								}
+								p{
+									font-size: 12px;
+									margin: 0 15px 5px;
+								}
+							}
+							span{
+								right: 10%;
+								top: 13;
+								font-size: 14px;
+								&:hover{
+									&::after{
+										right: -5px;
+									}
+								}
+							}
+						}
+					}
+				}
+				.box-test{
+					padding: 5px 5px 5px 0;
+				}
+				.box-carreras{
+					padding: 5px 0 5px 5px;
+				}
+				.box-saber{
+					padding: 0;
+					margin-top: -20px;
+				}
+			}
+		}
+	}
+	
+	.wrapper-footer{
+		.content{
+			margin-bottom: 15px;
+			padding: 0;
+			.content-footer{
+				.title , .fitness{
+					width: 80%;
+					margin: 0 auto;
+					margin-bottom: 20px;
+				}
+				.fitness{
+					.fitness-tenis, .fitness-runner{
+						.box-footer{
+							.mask{
+								top: 70%;
+								p{
+									padding: 0 5%;
+								}
+							}
+						}
+					}
+					.fitness-blog{
+						.box-footer{
+							.mask{
+								span{
+									right: 30%;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

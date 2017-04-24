@@ -1,0 +1,986 @@
+@import "fonts";
+@import "variables";
+@import "mixin";
+
+/** BASE STYLES **/
+body, html{
+	background-color: $body-bg;
+	font-family: $font-antonio;
+	font-size: $font-size-base;
+	@include screen-small{
+		font-size: $font-size-small;
+	}
+}
+
+a, a:hover, a:focus{
+	outline: 0;
+}
+
+#wrapper{
+	.top-wrapper{
+		background-color: #000;
+		background: url(../images/header_tenis_full.png) no-repeat 0 0 transparent;
+		background-size: 100%;
+		border-top: 1px solid #fff;
+		width: 100%;
+		text-align: center;
+		padding-bottom: 30px;
+		position: absolute;
+		z-index: 10;
+		.detail{
+			.especial, .consejos{
+				color: white;
+				display: inline-block;
+				font-family: 'antonio', sans-serif;
+				font-size: 24px;
+				margin: 70px 50px 0;
+				a{
+					text-decoration: none;
+					color: #fff;
+					span{
+						position: relative;
+						&::after{
+							background-color: #fff;
+							content: '';
+							height: 2px;
+							width: 100%;
+							position: absolute;
+							top: 25px;
+							left: 0;
+						}
+					}
+				}
+			}
+			.logo{
+				display: inline-block;
+				vertical-align: middle;
+			}
+		}
+	}
+	.none{
+		display: none;
+		@include transition(all .2s ease-in-out);
+	}
+	.wrapper_content{
+		height: 100vh;
+		position: relative;
+		.bullets{
+			height: 110px;
+			position: fixed;
+			right: 5%;
+			top: 50%;
+			width: 20px;
+			z-index: 100;
+			ul{
+				margin: 0;
+				position: absolute;
+				li{
+					background-color: #000;
+					border: medium none;
+					border-radius: 50%;
+					display: inline-block;
+					height: 10px;
+					width: 10px;
+					a{
+						position: relative;
+						text-decoration: none;
+						@include transition(all .2s ease-in-out);
+						&::before{
+							color: $verde_tenis;
+							content: 'sirve';
+							display: none;
+							left: -100px;
+							position: absolute;
+							text-align: right;
+							text-transform: uppercase;
+							top: -3px;
+							@include transition(all .2s ease-in-out);
+							width: 90px;
+						}
+					}
+					.inicio{
+						&::before{
+							content: 'INICIO';
+						}
+					}
+					.genero{
+						&::before{
+							content: 'G\00c9NERO';
+						}
+					}
+					.donde{
+						&::before{
+							content: 'D\00d3NDE';
+						}
+					}
+					.para{
+						&::before{
+							content: 'CORRO PARA';
+						}
+					}
+					.pisada{
+						&::before{
+							content: 'PISADA';
+						}
+					}
+					&:hover{ 
+						background-color: $verde_tenis;
+						@include transition(all .2s ease-in-out);
+						a{
+							&::before{
+								display: block;
+							}
+							/*p{
+								display: block;
+								}*/
+							}
+						}
+					}
+					.active{
+						background-color: $verde_tenis;
+						border: medium none;
+						border-radius: 50%;
+						display: inline-block;
+						height: 10px;
+						width: 10px;
+						a{
+							&::before{
+								display: block;
+							}
+						}
+					}
+				}
+			}
+		}
+		#content{
+			.detail{
+				padding-top: 160px;
+			}
+			#inicio{
+				background: url(../images/genero.jpg) no-repeat 0 0 transparent;
+				background-position: 60%;
+				position: relative;
+				img{
+					position: absolute;
+					right: 25%;
+				}
+				.text{
+					width: 40%;
+					position: absolute;
+					top: 40%;
+					left: 13%;
+					text-align: center;
+					h2{
+						color: #0b273d;
+						font-size: 41.36px;
+						font-family: 'antonio', sans-serif;
+						padding: 0 20%;
+					}
+					p{
+						color: #3e3e3e;
+						font-size: 24px;
+						font-family: 'nova', sans-serif;
+						padding: 0 14%;
+						line-height: 1.1;
+					}
+					span{
+						color: $verde_tenis;
+					}
+				}
+				.action{
+					a{
+						background: url(../images/sprite-recomendador.png);
+						bottom: 1%;
+						height: 70px;
+						left: 30%;
+						position: absolute;
+						width: 70px;
+					}
+					&::before{
+						content: 'COMENZAR';
+						color: #0b273d;
+						position: absolute;
+						bottom: 9%;
+						left: 30.5%; 
+					}
+				}
+			}
+			#genero, #donde{
+				background: url(../images/genero.jpg) no-repeat 0 0 transparent;
+				background-position: 10% 0%;
+				position: relative;
+				.options{
+					left: 0;
+					margin: 0 auto;
+					position: absolute;
+					right: 0;
+					text-align: center;
+					top: 20%;
+					width: 45%;
+					h4{
+						color: #0b273d;
+						font-size: 41.36px;
+						margin-right: 13%;
+						text-align: right;
+						text-transform: uppercase;
+					}
+					.mujer, .hombre, .ciudad, .campo{
+						display: inline-block;
+						margin: 25px;
+						overflow: hidden;
+						position: relative;
+						width: 33%;
+						&:hover{
+							@include transition(all .2s ease-in-out);
+							box-shadow: 0 0 5px 5px $verde_tenis;
+						}
+						.mask{
+							background-color: rgba(11,39,62,0.8);
+							bottom: 0px;
+							color: $white;
+							height: 60px;
+							position: absolute;
+							text-align: center;
+							width: 100%;
+							h3{
+								font-size: 26px;
+								margin: 0;
+								padding: 15px;
+								text-transform: uppercase;	
+							}
+						}
+					}
+				}
+				.volver{
+					a{
+						background: url(../images/volver.png);
+						bottom: 2%;
+						height: 43px;
+						left: 0;
+						margin: 0 auto;
+						position: absolute;
+						right: 0;
+						width: 96px;
+					}
+				}
+			}
+			#para{
+				background: url(../images/para.jpg) no-repeat 0 0 transparent;
+				background-position: -20% -20%;
+				position: relative;
+				.options{
+					margin: 0 auto;
+					position: absolute;
+					right: 0;
+					text-align: center;
+					top: 20%;
+					width: 80%;
+					h4{
+						color: #0b273d;
+						font-size: 41.36px;
+						margin-right: 5%;	
+						text-align: right;
+						text-transform: uppercase;
+					}
+					.box{
+						display: inline-block;
+						margin: 2%;
+						vertical-align: top;
+						width: 25%;
+						.divertirme, .mantenerme, .competir{
+							padding: 0;
+							position: relative;
+							&:hover{
+								@include transition(all .2s ease-in-out);
+								box-shadow: 0 0 5px 5px $verde_tenis;
+							}
+							.mask{
+								background-color: rgba(11,39,62,0.8);
+								bottom: 0px;
+								color: $white;
+								height: 80px;
+								position: absolute;
+								text-align: center;
+								width: 100%;
+								h3{
+									font-size: 26px;
+									margin: 0;
+									padding: 15px;
+									text-transform: uppercase;	
+								}
+								.mask-text{
+									position: relative;
+									height: 100%;
+									h3, .text{
+										position: absolute;
+										left: 0;
+										right: 0;
+										margin: 0 auto; 
+									}
+									.title{
+										padding: 13% 0 11% 0;
+									}
+								}
+							}
+						}	
+					}
+					.text{
+						display: inline-block;
+						margin: 0;
+						padding: 3%;
+						text-align: left;
+						p{
+							color: #1b354a;
+							font-family: 'nova', sans-serif;
+							font-size: 18px;
+							line-height: 1.2;					
+						}
+						a, a:hover{
+							text-decoration: none;
+						}
+					}				
+				}
+
+				.action{
+					a{
+						background: url(../images/sprite-recomendador.png);
+						background-position: 0 50px;
+						bottom: 5%;
+						height: 50px;
+						left: 0;
+						margin: 0 auto;
+						position: absolute;
+						right: 0;
+						width: 50px;
+					}
+				}
+				.volver{
+					a{
+						background: url(../images/volver.png);
+						bottom: 2%;
+						height: 43px;
+						left: 0;
+						margin: 0 auto;
+						position: absolute;
+						right: 0;
+						width: 96px;
+					}
+				}
+			}
+			#pisada{
+				background: url(../images/genero_2.jpg) no-repeat 0 0 transparent;
+				overflow: hidden !important;
+				padding: 0;
+				text-align: center;
+				width: 80%;
+				h4{
+					color: #0b273d;
+					font-size: 41.36px;
+					margin-top: 3%;
+					text-transform: uppercase;
+				}
+				.imagen{
+					position: absolute;
+					top: 12%;
+					left: 32%;
+					width: 17%;
+				}
+				.options{
+					left: 45%;
+					position: absolute;
+					right: 0;
+					text-align: center;
+					top: 10%;
+					width: 45%;
+					.boxes{
+						width: 70%;
+						margin: 0 auto;
+					}
+					.box{
+						margin: 2%;
+						width: 100%;
+						display: inline-block;
+						padding: 0;
+						vertical-align: top;
+						.pronadora, .neutra, .supinadora{
+							margin: 10px 0;
+							padding: 0;
+							position: relative;
+							&:hover{
+								@include transition(all .2s ease-in-out);
+								box-shadow: 0 0 5px 5px $verde_tenis;
+							}
+							.mask{
+								background-color: rgba(11,39,62,0.8);
+								bottom: 0px;
+								color: $white;
+								height: 40px;
+								position: absolute;
+								text-align: center;
+								width: 100%;
+								h3{
+									font-size: 20px;
+									margin: 0;
+									padding: 10px;
+									text-transform: uppercase;	
+								}
+							}
+						}	
+					}
+					.text{
+						display: inline-block;
+						margin: 0;
+						padding: 5px;
+						padding-top: 30px;
+						text-align: left;
+						p{
+							color: #1b354a;
+							float: right;
+							font-family: 'nova', sans-serif;
+							font-size: 14px;
+							line-height: 1.2;	
+							width: 90%;				
+						}
+					}				
+				}
+
+				.action{
+					a{
+						background: url(../images/sprite-recomendador.png);
+						background-position: 0 50px;
+						bottom: 5%;
+						height: 50px;
+						left: 0;
+						margin: 0 auto;
+						position: absolute;
+						right: 0;
+						width: 50px;
+					}
+				}
+				.volver{
+					a{
+						background: url(../images/volver.png);
+						bottom: 2%;
+						height: 43px;
+						left: 0;
+						margin: 0 auto;
+						position: absolute;
+						right: 0;
+						width: 96px;
+					}
+				}
+			}			
+		}
+		.new{
+			top: -58px;
+			@include transition(all .2s ease-in-out);
+		}
+	}
+
+@media only screen and (min-width: 1201px){
+		
+		#wrapper{
+			#content{
+				#para{
+					background: url(../images/para.jpg) no-repeat 0 0 transparent;
+					.options{
+						h4{
+							margin-right: 13%;
+						}
+						.box{
+							width: 25%;
+						}
+					}
+				}
+				#pisada{
+					.imagen{
+						    top: 12%;
+    						left: 25%;
+    						width: 15%;					
+    					}
+						.options{
+							.box{
+								width: 90%;
+								.supinadora, .neutra, .pronadora{	
+									.text{
+										margin-top: 10px;
+									}
+								}
+							}
+						}
+					}
+				}
+			}  
+}
+
+@media only screen and (min-width: 44.1em) and (max-width: 64em){
+	#wrapper{
+		.top-wrapper{
+			.detail{
+				.especial, .consejos{
+					margin-top: 40px;
+				}
+				.logo{
+					margin-top: 10px;
+					width: 130px;
+				}
+			}
+		}
+		.wrapper_content{
+			#content{
+				#inicio{
+					background-position: 60% 35%;
+					.text{
+						left: 5%;
+						top: 45%;
+						width: 70%;
+					}
+				}
+				#genero, #donde{
+					.options{
+						width: 75%;
+						.mujer, .hombre, .ciudad, .campo{
+
+						}
+					} 
+				}
+				#para{
+					background: none;
+					.options{
+						left: 0;
+						top: 0%;
+						width: 85%;
+						margin-left: 5%;
+						h4{
+							margin-bottom: 10%;
+						}
+						.box{
+							display: block;
+							display: block; 
+							padding: 0 10px; 
+							.divertirme, .mantenerme, competir{
+								margin: 0;
+							}
+							.text{
+								width: 100%;
+							}
+						}	
+					}	
+				}
+				#pisada{
+					background-size: 30%;
+					h4{
+						margin-top: 5%;
+					}
+					.imagen{
+						left: 25%;
+						top: 15%;
+    					width: 19%;
+					}
+					.options{
+						left: 37%;
+						padding-top: 5%;
+						top: 8%;
+						width: 50%;
+						.text{
+							padding-top: 15px;
+						}
+					}
+				}	
+			}	
+		}
+	}  
+	}
+
+@media only screen and (min-width: 44.1em) and (max-width: 64em) and (orientation: landscape){
+	#wrapper{
+		.top-wrapper{
+			.detail{
+				.especial, .consejos{
+					margin-top: 40px;
+				}
+				.logo{
+					margin-top: 10px;
+					width: 130px;
+				}
+			}
+		}
+		#content{
+			#inicio{
+				background-position: 60% 35%;
+				.text{
+					left: 5%;
+					top: 45%;
+					width: 70%;
+				}
+			}
+			#genero, #donde{
+				.options{
+					width: 75%;
+				} 
+			}
+			#para{
+				background: none;
+				.options{
+					width: 85%;
+					margin-left: 5%;
+					h4{
+						margin: 5% 5% 5% 0;
+					}
+					box{
+						width: 29%;
+						.divertirme, .mantenerme, competir{
+							margin: 0;
+							.mask{
+								mask-text{
+									h3{
+										font-size: 22px;
+									}
+								}
+							}
+						}
+					}	
+				}	
+			}
+			#pisada{
+				background-size: 30%;
+				h4{
+					margin-top: 5%;
+				}
+				.imagen{
+					right: 15%;
+					top: 15%;
+					width: 17%;
+				}
+				.options{
+					padding-top: 5%;
+					width: 70%;
+				}
+			}	
+		}	
+	}  
+}
+
+@media only screen and (max-width: 44em){
+	#wrapper{
+		.top-wrapper{
+			background: url(../images/header-recomendador-mobile.jpg) no-repeat 0 0 transparent;
+			padding-bottom: 0;
+			.detail{
+				.especial, .consejos{
+					margin: 10px;
+					a{
+						span{
+							font-size: 16px;
+						}
+					}
+				}
+				.logo{
+					margin: 10px 0;
+					width: 80px;
+				}
+			}
+		}
+		.bullets{
+			display: none;
+		} 
+		#content{
+			#inicio{
+				background: url(../images/guia-recomendador_mobile.jpg) no-repeat 0 0 transparent;
+				background-position-y: 15%;	
+				.text{
+					left: 0;
+					top: 50%;
+					width: 100%;
+					h2{
+						font-size: 30px;
+						padding: 0 10%;
+					}
+					p{
+						font-size: 16px;
+						padding: 0 7%;
+					}
+				}
+				.action{
+					a{	
+						background-position: 45% 100%;
+						bottom: 2%;
+						left: 43%;
+						width: 40px;
+						height: 40px;
+					}
+				}
+			}
+			#genero, #donde{
+				background: transparent;
+				.options{
+					top: 10%;
+					width: 100%;
+					.mujer, .hombre, .ciudad, .campo{
+						margin: 15% 0 0 10%;
+						width: 100%;
+						img{
+							border-radius: 10px;
+							border: 2px solid $verde_tenis;
+							-webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+							-moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+							box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+						}
+						&:hover{
+							box-shadow: none;
+							img{
+								border: 2px solid $verde_tenis;
+								-webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+								-moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+								box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+							}
+						}
+					}
+				}
+			}
+			#para{
+				background: transparent;
+				.options{
+					top: 5%;
+					width: 100%;
+					.box{
+						border: 2px solid $verde_tenis;
+						border-radius: 10px;
+						margin-bottom: 20px;
+						padding: 0; 
+						width: 90%;
+						-webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+						-moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+						box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+						a, a:hover{text-decoration: none;}
+						.divertirme, .mantenerme, .competir{
+							margin: 0;
+							padding: 0;
+							img{
+								margin: 0 auto;
+							}
+							&:hover{
+								border: none;
+								box-shadow: none;
+								h3{
+									text-decoration: none;
+								}
+							}
+							.box-mobile{
+								margin: 0 auto; 
+								h3{
+									color: #0b273d;
+									margin: 10px 0;
+									text-align: center;
+								}
+							}
+						}
+						.text{
+							padding: 0;
+							a{
+								color: #1b354a;
+								text-decoration: none;
+							}
+							h3{
+								font-size: 25px;
+								margin-bottom: 0;
+							}
+							p{
+								font-size: 16px;
+								margin-top: 10px;
+							}
+						}
+
+					}
+				}
+				.volver{
+					a{
+						bottom: 0;
+					}
+				} 
+			}
+			#pisada{
+				background: transparent;
+				overflow: auto !important;
+				overflow-x: hidden; 
+				h4{
+					padding-top: 5px;
+					font-size: 30px;
+					margin-bottom: 5px;
+				}
+				.options{
+					left: 0;	
+					margin: 0;
+					top: 8%;
+					width: 100%;
+					.instrucciones{
+						margin-bottom: 35px;
+						.slick-dots {
+							bottom: -22px; 
+							left: 0; 
+							list-style: outside none none; 
+							margin: 0 auto; 
+							padding: 0; 
+							position: absolute; 
+							right: 0; 
+							text-align: center;
+							li{
+								display: inline-block;
+								margin-right: 5px;
+								button { 
+									background-color: #7d7d7d;
+									border: medium none;
+									border-radius: 50%;
+									font-size: 0;
+									height: 10px;
+									margin: 0;
+									padding: 0;
+									width: 10px; 
+								}	
+							}
+							.slick-active button { 
+								background-color: #ADC91F; 
+							}
+						}	
+					}
+					.boxes{
+						width: 80%;
+					}
+					.box{
+						border: 2px solid $verde_tenis;
+						border-radius: 10px;
+						margin: 2% 2% 2% 0;
+						width: 100%;
+						-webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+						-moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+						box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+						.supinadora, .neutra, .pronadora{
+							margin: 5px 0;
+							padding: 0;
+							.link{
+								img{
+									margin: 0 auto;
+								}
+							}
+							&:hover{
+								box-shadow: none;
+								img{
+									border: none;
+								}
+							}
+						}
+						.text{
+							margin-top: 15px;
+							font-size: 13px;
+							padding: 0;
+							h3{
+								color: #0b273d;
+								font-size: 24px;
+								margin: 5px 0 3px 0;
+								padding-left: 14px;
+							}
+							p{
+								margin: 0;
+								padding-left: 14px;
+								width: 100%;
+							}
+						}
+					}
+				}
+				.volver{
+					a{
+						bottom: 0%;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 44em) and (orientation: landscape){
+	#wrapper{
+		.wrapper_content{
+			#content{
+				#inicio{
+					background: transparent;
+					.text{
+						top: 40%;
+						h2{
+							font-size: 35px;
+						}
+						p{
+							padding: 0 28%;
+						}
+					}
+				}
+				#genero, #donde{
+					.options{
+						.mujer, .hombre, .ciudad, .campo{
+							margin-top: 0;
+							img{
+								margin: 0 auto;
+							}
+						}
+					} 
+				}
+				#para{
+					.volver{
+						a{
+							bottom: -60%;
+						}
+					}
+				}
+				#pisada{
+					.options{
+						top: 15%;	
+						.box{
+							.pronadora, .neutra, .supinadora{
+								margin-top: 1%;
+								.link{
+									img{
+										margin: 0 auto;
+									}
+								}
+							}
+						}
+					}
+					.volver{
+						a{
+							bottom: -50%;
+						}
+					}
+				}
+			}
+		} 
+	}    
+}
+
+@media only screen and (max-width: 20em){
+	#wrapper{
+		#content{
+			#genero, #donde{
+				.options{
+					.mujer, .hombre, .ciudad, .campo{
+						margin: 15px 0;
+						padding: 0 20px;
+					}
+				}
+			}
+			#para{
+				.volver{
+					a{
+						bottom: -40%;
+					}
+				}
+			}
+			#pisada{
+				.volver{
+					a{
+						bottom: -15%;
+					}
+				}
+			}
+		}
+	}
+}
+	

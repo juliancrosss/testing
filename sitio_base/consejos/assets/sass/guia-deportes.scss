@@ -1,0 +1,381 @@
+$futbol-color: #00b27a;
+$outdoor-color: #db6e36;
+$ciclismo-color: #63b3e7;
+$tenis-color: #c4dc00;
+$basketball-color: #d7403f;
+$skate-color: #f5d152;
+$ciclismo-color: #63b3e7;
+$training-color: #e54068;
+$running-color: #4385a0;
+
+@font-face {
+	font-family: 'antonio';
+	src: url("../fonts/antonio/antonio-regular.eot");
+	src: url("../fonts/antonio/antonio-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/antonio/antonio-regular.woff2") format("woff2"), url("../fonts/antonio/antonio-regular.woff") format("woff"), url("../fonts/antonio/antonio-regular.ttf") format("truetype"), url("../fonts/antonio/antonio-regular.svg#antonio") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'playfair_displaybold';
+	src: url('../fonts/playfair/playfairdisplay-bold-webfont.eot');
+	src: url('../fonts/playfair/playfairdisplay-bold-webfont.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/playfair/playfairdisplay-bold-webfont.woff2') format('woff2'),
+	url('../fonts/playfair/playfairdisplay-bold-webfont.woff') format('woff'),
+	url('../fonts/playfair/playfairdisplay-bold-webfont.ttf') format('truetype'),
+	url('../fonts/playfair/playfairdisplay-bold-webfont.svg#playfair_displaybold') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'playfair_displayregular';
+	src: url('../fonts/playfair/playfairdisplay-regular-webfont.eot');
+	src: url('../fonts/playfair/playfairdisplay-regular-webfont.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/playfair/playfairdisplay-regular-webfont.woff2') format('woff2'),
+	url('../fonts/playfair/playfairdisplay-regular-webfont.woff') format('woff'),
+	url('../fonts/playfair/playfairdisplay-regular-webfont.ttf') format('truetype'),
+	url('../fonts/playfair/playfairdisplay-regular-webfont.svg#playfair_displayregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'nova';
+	src: url("../fonts/proximaNova/proxima_nova_reg.eot");
+	src: url("../fonts/proximaNova/proxima_nova_reg.eot?#iefix") format("embedded-opentype"), url("../fonts/proximaNova/proxima_nova_reg.woff2") format("woff2"), url("../fonts/proximaNova/proxima_nova_reg.woff") format("woff"), url("../fonts/proximaNova/proxima_nova_reg.ttf") format("truetype"), url("../fonts/proximaNova/proxima_nova_reg.svg#nova") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+
+.highlighted, .subsection__title{
+	font-weight: bold;
+}
+
+$breakpoint-xs: 360px;
+$breakpoint-sm: 768px;
+$breakpoint-md: 992px;
+$breakpoint-lg: 1360px;
+
+@mixin media($media) {
+	@if $media == xs {
+		@media (max-width: $breakpoint-sm) { @content; }
+	}
+	@else if $media == sm {
+		@media (min-width: $breakpoint-sm) and (max-width: $breakpoint-md) { @content; }
+	}
+	@else if $media == md {
+		@media (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) { @content; }
+	}
+	@else if $media == lg {
+		@media (min-width: $breakpoint-lg) { @content; }
+	}
+}
+
+@mixin sectionColor($color) {
+	border: 2px solid $color;
+	.section__title{
+		color: $color;
+		text-transform: uppercase;
+	}
+	.button-section{
+		border: 2px solid $color;
+		color: $color;
+		&:hover{
+			text-decoration: none;
+			background-color: $color;
+			color: white;
+		}
+	}
+}
+
+.section-futbol{
+	@include sectionColor($futbol-color);
+	.image2{
+		max-width: 51%;
+	}
+}
+.section-outdoor{
+	@include sectionColor($outdoor-color);
+	.image2{
+		max-width: 51%;
+	}
+}
+.section-ciclismo{
+	@include sectionColor($ciclismo-color);
+	.image2{
+		left: 70px;
+		position: absolute;
+		top: -122px;
+		width: 90%;
+		z-index: 3;
+		@include media(xs){
+			position: static;
+			width: 100%;
+		}
+	}
+}
+.section-tenis{
+	@include sectionColor($tenis-color);
+	.image1{
+		position: absolute;
+		max-width: 81%;
+		top: -69px;
+		@include media(xs){
+			position: static;
+			width: 100%;
+		}
+	}
+	.image2{
+		position: absolute;
+		max-width: 84%;
+		@include media(xs){
+			position: static;
+			width: 100%;
+		}
+	}
+	.paragraph2{
+		margin-top: 103px;
+		@include media(xs){
+			margin-top: auto;
+		}
+	}
+}
+.section-basketball{
+	@include sectionColor($basketball-color);
+	.image2{
+		position: absolute;
+		max-width: 46%;
+		top: -200px;
+		@include media(xs){
+			position: static;
+		}
+	}
+}
+.section-skate{
+	@include sectionColor($skate-color);
+	.paragraph1{
+		margin-bottom: 80px;
+		@include media(xs){
+			margin-bottom: 0px;
+		}
+	}
+	.image1{
+		position: absolute;
+		max-width: 91%;
+		top: -88px;
+		@include media(xs){
+			position: static;
+		}
+	}
+	.image2{
+		position: absolute;
+		max-width: 81%;
+		top: -100px;
+		@include media(xs){
+			position: static;
+			max-width: 100%;
+		}
+	}
+}
+.section-training{
+	@include sectionColor($training-color);
+	.image2{
+		position: absolute;
+		max-width: 38%;
+		top: -116px;
+		display: inline-block;
+		right: 100px;
+		z-index: 2;
+		@include media(xs){
+			position: static;
+			display: block;
+			margin: 0 auto;
+		}
+	}
+}
+.section-running{
+	@include sectionColor($running-color);
+	.image2{
+		position: absolute;
+		max-width: 38%;
+		top: -60px;
+		display: inline-block;
+		z-index: 2;
+		left: 100px;
+		@include media(xs){
+			position: static;
+			display: block;
+			margin: 0 auto;
+		}
+	}
+}
+
+.wrapper-header-deportes{
+	margin-bottom: 20px;
+	.header-guias{
+		background-color: rgba(0,0,0,0.5);
+		background-size: 100%;
+		border-top: 1px solid #fff;
+		width: 100%;
+		text-align: center;
+		padding-bottom: 0;
+		position: absolute;
+		z-index: 10;
+		.especial, .consejos{
+			color: white;
+			display: inline-block;
+			font-family: 'antonio', sans-serif;
+			font-size: 18px;
+			margin: 0;
+			a{
+				text-decoration: none;
+				color: #fff;
+				span{
+					position: relative;
+					&::after{
+						background-color: #fff;
+						content: '';
+						height: 2px;
+						width: 100%;
+						position: absolute;
+						top: 25px;
+						left: 0;
+					}
+				}
+			}
+		}
+		.logo{
+			display: inline-block;
+			vertical-align: middle;
+			margin: 10px 0;
+			width: 100px;
+		}
+	}
+	.header-deportes{
+		position: relative;
+		h2{
+			bottom: 0;
+			font-family: 'antonio';
+			font-size: 35px;
+			color: white;
+			margin-bottom: 0; 
+			position: absolute;
+			text-shadow: 2px 2px 7px #000;
+			@include media(xs) {
+				font-size: 35px;
+			}	
+		}	
+	}
+}
+
+.img-responsive{
+	width: 100%;
+}
+
+.container{
+	font-family: 'nova', sans-serif, arial;
+	font-size: 16px;
+}
+
+.section{
+	margin: 30px 30px 60px 30px;
+	box-sizing: border-box;
+	padding: 30px;
+	position: relative;
+	@include media(xs){
+		margin: 60px 5px 60px 5px;
+		padding: 10px;
+	}
+	.subsection{
+		margin: 20px 0px;
+	}
+	.subsection-hidden{
+		margin: 0px;
+	}
+	img{
+		max-width: 100%;
+	}
+	&:before{
+		content: '';
+		background-color: white;
+		position: relative;
+		width: 80%;
+		height: 20px;
+		margin: 0 auto;
+		top: -42px;
+		@include media(xs){
+			top: -24px;
+		}
+	}
+	&:after{
+		content: '';
+		background-color: white;
+		position: relative;
+		width: 80%;
+		height: 20px;
+		margin: 0 auto;
+		top: 42px;
+		@include media(xs){
+			top: 24px;
+		}
+	}
+	.section__title{
+		margin-top: -63px;
+		z-index: 3;
+		position: relative;
+		margin-bottom: 30px;
+		font-family: 'antonio', sans-serif;
+		font-size: 4em;
+	}
+	.button-section{
+		font-size: 16px;
+		padding: 10px 40px;
+		text-decoration: none;
+		transition: all .3s ease-in-out;
+		position: relative;
+		top: 54px;
+		z-index: 2;
+		@include media(xs){
+			top: 36px;
+		}
+		&:after{
+			content: '>';
+			margin-left: 5px;
+		}
+	}
+}
+
+@media only screen and (min-width: 40.1em) and (max-width: 64em){
+	.section-ciclismo .image2{
+		left: 20px;
+		top: 0;
+	}
+}
+
+@media only screen and (max-width: 40em){
+	.wrapper-header-deportes{
+		margin-bottom: 20px;
+		.header-guias{
+			background-color: rgba(0,0,0,1); 
+			position: relative;
+			.especial, .consejos{
+				margin: 0;
+				font-size: 17px;
+				a{
+					span::after{
+						top: 17px;
+					}
+				}
+			}
+			.logo{
+				width: 80px;
+			}
+		}
+		.header-deportes{
+			h2{
+				font-size: 30px;
+			}
+		}
+	}
+}

@@ -1,0 +1,196 @@
+@font-face { font-family: 'nova'; src: url("../fonts/proximaNova/proxima_nova_reg.eot"); src: url("../fonts/proximaNova/proxima_nova_reg.eot?#iefix") format("embedded-opentype"), url("../fonts/proximaNova/proxima_nova_reg.woff2") format("woff2"), url("../fonts/proximaNova/proxima_nova_reg.woff") format("woff"), url("../fonts/proximaNova/proxima_nova_reg.ttf") format("truetype"), url("../fonts/proximaNova/proxima_nova_reg.svg#nova") format("svg"); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'novaL'; src: url("../fonts/proximaNova/proxima_nova_light.eot"); src: url("../fonts/proximaNova/proxima_nova_light.eot?#iefix") format("embedded-opentype"), url("../fonts/proximaNova/proxima_nova_light.woff2") format("woff2"), url("../fonts/proximaNova/proxima_nova_light.woff") format("woff"), url("../fonts/proximaNova/proxima_nova_light.ttf") format("truetype"), url("../fonts/proximaNova/proxima_nova_light.svg#novaL") format("svg"); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'novaB'; src: url("../fonts/proximaNova/proxima_nova_bold.eot"); src: url("../fonts/proximaNova/proxima_nova_bold.eot?#iefix") format("embedded-opentype"), url("../fonts/proximaNova/proxima_nova_bold.woff2") format("woff2"), url("../fonts/proximaNova/proxima_nova_bold.woff") format("woff"), url("../fonts/proximaNova/proxima_nova_bold.ttf") format("truetype"), url("../fonts/proximaNova/proxima_nova_bold.svg#novaB") format("svg"); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'antonio'; src: url("../fonts/antonio/antonio-regular.eot"); src: url("../fonts/antonio/antonio-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/antonio/antonio-regular.woff2") format("woff2"), url("../fonts/antonio/antonio-regular.woff") format("woff"), url("../fonts/antonio/antonio-regular.ttf") format("truetype"), url("../fonts/antonio/antonio-regular.svg#antonio") format("svg"); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'antonioL'; src: url("../fonts/antonio/antonio-light.eot"); src: url("../fonts/antonio/antonio-light.eot?#iefix") format("embedded-opentype"), url("../fonts/antonio/antonio-light.woff2") format("woff2"), url("../fonts/antonio/antonio-light.woff") format("woff"), url("../fonts/antonio/antonio-light.ttf") format("truetype"), url("../fonts/antonio/antonio-light.svg#antonioL") format("svg"); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'antonioB'; src: url("../fonts/antonio/antonio-bold.eot"); src: url("../fonts/antonio/antonio-bold.eot?#iefix") format("embedded-opentype"), url("../fonts/antonio/antonio-bold.woff2") format("woff2"), url("../fonts/antonio/antonio-bold.woff") format("woff"), url("../fonts/antonio/antonio-bold.ttf") format("truetype"), url("../fonts/antonio/antonio-bold.svg#antonioB") format("svg"); font-weight: normal; font-style: normal; }
+/* Colors */
+/* Fonts */
+/* Fonts sizes */
+/* Animations */
+@-webkit-keyframes bounce { 0%, 20%, 50%, 80%, 100% { -webkit-transform: translateY(0); transform: translateY(0); }
+  40% { -webkit-transform: translateY(-5px); transform: translateY(-5px); }
+  60% { -webkit-transform: translateY(-5px); transform: translateY(-5px); } }
+@keyframes bounce { 0%, 20%, 50%, 80%, 100% { -ms-transform: translateY(0); -webkit-transform: translateY(0); transform: translateY(0); }
+  40% { -ms-transform: translateY(-5px); -webkit-transform: translateY(-5px); transform: translateY(-5px); }
+  60% { -ms-transform: translateY(-5px); -webkit-transform: translateY(-5px); transform: translateY(-5px); } }
+/** BASE STYLES **/
+body, html { background-color: #fff; font-family: "antonio", sans-serif; font-size: 16px; }
+@media only screen and (max-width: 40em) { body, html { font-size: 14px; } }
+
+a, a:hover, a:focus { outline: 0; }
+
+#wrapper .top-wrapper { background-color: #000; background: url(../images/header_tenis_full.png) no-repeat 0 0 transparent; background-size: 100%; border-top: 1px solid #fff; width: 100%; text-align: center; padding-bottom: 30px; position: absolute; z-index: 10; }
+#wrapper .top-wrapper .detail .especial, #wrapper .top-wrapper .detail .consejos { color: white; display: inline-block; font-family: 'antonio', sans-serif; font-size: 24px; margin: 70px 50px 0; }
+#wrapper .top-wrapper .detail .especial a, #wrapper .top-wrapper .detail .consejos a { text-decoration: none; color: #fff; }
+#wrapper .top-wrapper .detail .especial a span, #wrapper .top-wrapper .detail .consejos a span { position: relative; }
+#wrapper .top-wrapper .detail .especial a span::after, #wrapper .top-wrapper .detail .consejos a span::after { background-color: #fff; content: ''; height: 2px; width: 100%; position: absolute; top: 25px; left: 0; }
+#wrapper .top-wrapper .detail .logo { display: inline-block; vertical-align: middle; }
+#wrapper .none { display: none; -webkit-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out; }
+#wrapper .wrapper_content { height: 100vh; position: relative; }
+#wrapper .wrapper_content .bullets { height: 110px; position: fixed; right: 5%; top: 50%; width: 20px; z-index: 100; }
+#wrapper .wrapper_content .bullets ul { margin: 0; position: absolute; }
+#wrapper .wrapper_content .bullets ul li { background-color: #000; border: medium none; border-radius: 50%; display: inline-block; height: 10px; width: 10px; }
+#wrapper .wrapper_content .bullets ul li a { position: relative; text-decoration: none; -webkit-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out; }
+#wrapper .wrapper_content .bullets ul li a::before { color: #bdd52e; content: 'sirve'; display: none; left: -100px; position: absolute; text-align: right; text-transform: uppercase; top: -3px; -webkit-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out; width: 90px; }
+#wrapper .wrapper_content .bullets ul li .inicio::before { content: 'INICIO'; }
+#wrapper .wrapper_content .bullets ul li .genero::before { content: 'G\00c9NERO'; }
+#wrapper .wrapper_content .bullets ul li .donde::before { content: 'D\00d3NDE'; }
+#wrapper .wrapper_content .bullets ul li .para::before { content: 'CORRO PARA'; }
+#wrapper .wrapper_content .bullets ul li .pisada::before { content: 'PISADA'; }
+#wrapper .wrapper_content .bullets ul li:hover { background-color: #bdd52e; -webkit-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out; }
+#wrapper .wrapper_content .bullets ul li:hover a { /*p{
+	display: block;
+	}*/ }
+#wrapper .wrapper_content .bullets ul li:hover a::before { display: block; }
+#wrapper .wrapper_content .bullets ul .active { background-color: #bdd52e; border: medium none; border-radius: 50%; display: inline-block; height: 10px; width: 10px; }
+#wrapper .wrapper_content .bullets ul .active a::before { display: block; }
+#wrapper #content .detail { padding-top: 160px; }
+#wrapper #content #inicio { background: url(../images/genero.jpg) no-repeat 0 0 transparent; background-position: 60%; position: relative; }
+#wrapper #content #inicio img { position: absolute; right: 25%; }
+#wrapper #content #inicio .text { width: 40%; position: absolute; top: 40%; left: 13%; text-align: center; }
+#wrapper #content #inicio .text h2 { color: #0b273d; font-size: 41.36px; font-family: 'antonio', sans-serif; padding: 0 20%; }
+#wrapper #content #inicio .text p { color: #3e3e3e; font-size: 24px; font-family: 'nova', sans-serif; padding: 0 14%; line-height: 1.1; }
+#wrapper #content #inicio .text span { color: #bdd52e; }
+#wrapper #content #inicio .action a { background: url(../images/sprite-recomendador.png); bottom: 1%; height: 70px; left: 30%; position: absolute; width: 70px; }
+#wrapper #content #inicio .action::before { content: 'COMENZAR'; color: #0b273d; position: absolute; bottom: 9%; left: 30.5%; }
+#wrapper #content #genero, #wrapper #content #donde { background: url(../images/genero.jpg) no-repeat 0 0 transparent; background-position: 10% 0%; position: relative; }
+#wrapper #content #genero .options, #wrapper #content #donde .options { left: 0; margin: 0 auto; position: absolute; right: 0; text-align: center; top: 20%; width: 45%; }
+#wrapper #content #genero .options h4, #wrapper #content #donde .options h4 { color: #0b273d; font-size: 41.36px; margin-right: 13%; text-align: right; text-transform: uppercase; }
+#wrapper #content #genero .options .mujer, #wrapper #content #genero .options .hombre, #wrapper #content #genero .options .ciudad, #wrapper #content #genero .options .campo, #wrapper #content #donde .options .mujer, #wrapper #content #donde .options .hombre, #wrapper #content #donde .options .ciudad, #wrapper #content #donde .options .campo { display: inline-block; margin: 25px; overflow: hidden; position: relative; width: 33%; }
+#wrapper #content #genero .options .mujer:hover, #wrapper #content #genero .options .hombre:hover, #wrapper #content #genero .options .ciudad:hover, #wrapper #content #genero .options .campo:hover, #wrapper #content #donde .options .mujer:hover, #wrapper #content #donde .options .hombre:hover, #wrapper #content #donde .options .ciudad:hover, #wrapper #content #donde .options .campo:hover { -webkit-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out; box-shadow: 0 0 5px 5px #bdd52e; }
+#wrapper #content #genero .options .mujer .mask, #wrapper #content #genero .options .hombre .mask, #wrapper #content #genero .options .ciudad .mask, #wrapper #content #genero .options .campo .mask, #wrapper #content #donde .options .mujer .mask, #wrapper #content #donde .options .hombre .mask, #wrapper #content #donde .options .ciudad .mask, #wrapper #content #donde .options .campo .mask { background-color: rgba(11, 39, 62, 0.8); bottom: 0px; color: #FFF; height: 60px; position: absolute; text-align: center; width: 100%; }
+#wrapper #content #genero .options .mujer .mask h3, #wrapper #content #genero .options .hombre .mask h3, #wrapper #content #genero .options .ciudad .mask h3, #wrapper #content #genero .options .campo .mask h3, #wrapper #content #donde .options .mujer .mask h3, #wrapper #content #donde .options .hombre .mask h3, #wrapper #content #donde .options .ciudad .mask h3, #wrapper #content #donde .options .campo .mask h3 { font-size: 26px; margin: 0; padding: 15px; text-transform: uppercase; }
+#wrapper #content #genero .volver a, #wrapper #content #donde .volver a { background: url(../images/volver.png); bottom: 2%; height: 43px; left: 0; margin: 0 auto; position: absolute; right: 0; width: 96px; }
+#wrapper #content #para { background: url(../images/para.jpg) no-repeat 0 0 transparent; background-position: -20% -20%; position: relative; }
+#wrapper #content #para .options { margin: 0 auto; position: absolute; right: 0; text-align: center; top: 20%; width: 80%; }
+#wrapper #content #para .options h4 { color: #0b273d; font-size: 41.36px; margin-right: 5%; text-align: right; text-transform: uppercase; }
+#wrapper #content #para .options .box { display: inline-block; margin: 2%; vertical-align: top; width: 25%; }
+#wrapper #content #para .options .box .divertirme, #wrapper #content #para .options .box .mantenerme, #wrapper #content #para .options .box .competir { padding: 0; position: relative; }
+#wrapper #content #para .options .box .divertirme:hover, #wrapper #content #para .options .box .mantenerme:hover, #wrapper #content #para .options .box .competir:hover { -webkit-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out; box-shadow: 0 0 5px 5px #bdd52e; }
+#wrapper #content #para .options .box .divertirme .mask, #wrapper #content #para .options .box .mantenerme .mask, #wrapper #content #para .options .box .competir .mask { background-color: rgba(11, 39, 62, 0.8); bottom: 0px; color: #FFF; height: 80px; position: absolute; text-align: center; width: 100%; }
+#wrapper #content #para .options .box .divertirme .mask h3, #wrapper #content #para .options .box .mantenerme .mask h3, #wrapper #content #para .options .box .competir .mask h3 { font-size: 26px; margin: 0; padding: 15px; text-transform: uppercase; }
+#wrapper #content #para .options .box .divertirme .mask .mask-text, #wrapper #content #para .options .box .mantenerme .mask .mask-text, #wrapper #content #para .options .box .competir .mask .mask-text { position: relative; height: 100%; }
+#wrapper #content #para .options .box .divertirme .mask .mask-text h3, #wrapper #content #para .options .box .divertirme .mask .mask-text .text, #wrapper #content #para .options .box .mantenerme .mask .mask-text h3, #wrapper #content #para .options .box .mantenerme .mask .mask-text .text, #wrapper #content #para .options .box .competir .mask .mask-text h3, #wrapper #content #para .options .box .competir .mask .mask-text .text { position: absolute; left: 0; right: 0; margin: 0 auto; }
+#wrapper #content #para .options .box .divertirme .mask .mask-text .title, #wrapper #content #para .options .box .mantenerme .mask .mask-text .title, #wrapper #content #para .options .box .competir .mask .mask-text .title { padding: 13% 0 11% 0; }
+#wrapper #content #para .options .text { display: inline-block; margin: 0; padding: 3%; text-align: left; }
+#wrapper #content #para .options .text p { color: #1b354a; font-family: 'nova', sans-serif; font-size: 18px; line-height: 1.2; }
+#wrapper #content #para .options .text a, #wrapper #content #para .options .text a:hover { text-decoration: none; }
+#wrapper #content #para .action a { background: url(../images/sprite-recomendador.png); background-position: 0 50px; bottom: 5%; height: 50px; left: 0; margin: 0 auto; position: absolute; right: 0; width: 50px; }
+#wrapper #content #para .volver a { background: url(../images/volver.png); bottom: 2%; height: 43px; left: 0; margin: 0 auto; position: absolute; right: 0; width: 96px; }
+#wrapper #content #pisada { background: url(../images/genero_2.jpg) no-repeat 0 0 transparent; overflow: hidden !important; padding: 0; text-align: center; width: 80%; }
+#wrapper #content #pisada h4 { color: #0b273d; font-size: 41.36px; margin-top: 3%; text-transform: uppercase; }
+#wrapper #content #pisada .imagen { position: absolute; top: 12%; left: 32%; width: 17%; }
+#wrapper #content #pisada .options { left: 45%; position: absolute; right: 0; text-align: center; top: 10%; width: 45%; }
+#wrapper #content #pisada .options .boxes { width: 70%; margin: 0 auto; }
+#wrapper #content #pisada .options .box { margin: 2%; width: 100%; display: inline-block; padding: 0; vertical-align: top; }
+#wrapper #content #pisada .options .box .pronadora, #wrapper #content #pisada .options .box .neutra, #wrapper #content #pisada .options .box .supinadora { margin: 10px 0; padding: 0; position: relative; }
+#wrapper #content #pisada .options .box .pronadora:hover, #wrapper #content #pisada .options .box .neutra:hover, #wrapper #content #pisada .options .box .supinadora:hover { -webkit-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out; box-shadow: 0 0 5px 5px #bdd52e; }
+#wrapper #content #pisada .options .box .pronadora .mask, #wrapper #content #pisada .options .box .neutra .mask, #wrapper #content #pisada .options .box .supinadora .mask { background-color: rgba(11, 39, 62, 0.8); bottom: 0px; color: #FFF; height: 40px; position: absolute; text-align: center; width: 100%; }
+#wrapper #content #pisada .options .box .pronadora .mask h3, #wrapper #content #pisada .options .box .neutra .mask h3, #wrapper #content #pisada .options .box .supinadora .mask h3 { font-size: 20px; margin: 0; padding: 10px; text-transform: uppercase; }
+#wrapper #content #pisada .options .text { display: inline-block; margin: 0; padding: 5px; padding-top: 30px; text-align: left; }
+#wrapper #content #pisada .options .text p { color: #1b354a; float: right; font-family: 'nova', sans-serif; font-size: 14px; line-height: 1.2; width: 90%; }
+#wrapper #content #pisada .action a { background: url(../images/sprite-recomendador.png); background-position: 0 50px; bottom: 5%; height: 50px; left: 0; margin: 0 auto; position: absolute; right: 0; width: 50px; }
+#wrapper #content #pisada .volver a { background: url(../images/volver.png); bottom: 2%; height: 43px; left: 0; margin: 0 auto; position: absolute; right: 0; width: 96px; }
+#wrapper .new { top: -58px; -webkit-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out; }
+
+@media only screen and (min-width: 1201px) { #wrapper #content #para { background: url(../images/para.jpg) no-repeat 0 0 transparent; }
+  #wrapper #content #para .options h4 { margin-right: 13%; }
+  #wrapper #content #para .options .box { width: 25%; }
+  #wrapper #content #pisada .imagen { top: 12%; left: 25%; width: 15%; }
+  #wrapper #content #pisada .options .box { width: 90%; }
+  #wrapper #content #pisada .options .box .supinadora .text, #wrapper #content #pisada .options .box .neutra .text, #wrapper #content #pisada .options .box .pronadora .text { margin-top: 10px; } }
+@media only screen and (min-width: 44.1em) and (max-width: 64em) { #wrapper .top-wrapper .detail .especial, #wrapper .top-wrapper .detail .consejos { margin-top: 40px; }
+  #wrapper .top-wrapper .detail .logo { margin-top: 10px; width: 130px; }
+  #wrapper .wrapper_content #content #inicio { background-position: 60% 35%; }
+  #wrapper .wrapper_content #content #inicio .text { left: 5%; top: 45%; width: 70%; }
+  #wrapper .wrapper_content #content #genero .options, #wrapper .wrapper_content #content #donde .options { width: 75%; }
+  #wrapper .wrapper_content #content #para { background: none; }
+  #wrapper .wrapper_content #content #para .options { left: 0; top: 0%; width: 85%; margin-left: 5%; }
+  #wrapper .wrapper_content #content #para .options h4 { margin-bottom: 10%; }
+  #wrapper .wrapper_content #content #para .options .box { display: block; display: block; padding: 0 10px; }
+  #wrapper .wrapper_content #content #para .options .box .divertirme, #wrapper .wrapper_content #content #para .options .box .mantenerme, #wrapper .wrapper_content #content #para .options .box competir { margin: 0; }
+  #wrapper .wrapper_content #content #para .options .box .text { width: 100%; }
+  #wrapper .wrapper_content #content #pisada { background-size: 30%; }
+  #wrapper .wrapper_content #content #pisada h4 { margin-top: 5%; }
+  #wrapper .wrapper_content #content #pisada .imagen { left: 25%; top: 15%; width: 19%; }
+  #wrapper .wrapper_content #content #pisada .options { left: 37%; padding-top: 5%; top: 8%; width: 50%; }
+  #wrapper .wrapper_content #content #pisada .options .text { padding-top: 15px; } }
+@media only screen and (min-width: 44.1em) and (max-width: 64em) and (orientation: landscape) { #wrapper .top-wrapper .detail .especial, #wrapper .top-wrapper .detail .consejos { margin-top: 40px; }
+  #wrapper .top-wrapper .detail .logo { margin-top: 10px; width: 130px; }
+  #wrapper #content #inicio { background-position: 60% 35%; }
+  #wrapper #content #inicio .text { left: 5%; top: 45%; width: 70%; }
+  #wrapper #content #genero .options, #wrapper #content #donde .options { width: 75%; }
+  #wrapper #content #para { background: none; }
+  #wrapper #content #para .options { width: 85%; margin-left: 5%; }
+  #wrapper #content #para .options h4 { margin: 5% 5% 5% 0; }
+  #wrapper #content #para .options box { width: 29%; }
+  #wrapper #content #para .options box .divertirme, #wrapper #content #para .options box .mantenerme, #wrapper #content #para .options box competir { margin: 0; }
+  #wrapper #content #para .options box .divertirme .mask mask-text h3, #wrapper #content #para .options box .mantenerme .mask mask-text h3, #wrapper #content #para .options box competir .mask mask-text h3 { font-size: 22px; }
+  #wrapper #content #pisada { background-size: 30%; }
+  #wrapper #content #pisada h4 { margin-top: 5%; }
+  #wrapper #content #pisada .imagen { right: 15%; top: 15%; width: 17%; }
+  #wrapper #content #pisada .options { padding-top: 5%; width: 70%; } }
+@media only screen and (max-width: 44em) { #wrapper .top-wrapper { background: url(../images/header-recomendador-mobile.jpg) no-repeat 0 0 transparent; padding-bottom: 0; }
+  #wrapper .top-wrapper .detail .especial, #wrapper .top-wrapper .detail .consejos { margin: 10px; }
+  #wrapper .top-wrapper .detail .especial a span, #wrapper .top-wrapper .detail .consejos a span { font-size: 16px; }
+  #wrapper .top-wrapper .detail .logo { margin: 10px 0; width: 80px; }
+  #wrapper .bullets { display: none; }
+  #wrapper #content #inicio { background: url(../images/guia-recomendador_mobile.jpg) no-repeat 0 0 transparent; background-position-y: 15%; }
+  #wrapper #content #inicio .text { left: 0; top: 50%; width: 100%; }
+  #wrapper #content #inicio .text h2 { font-size: 30px; padding: 0 10%; }
+  #wrapper #content #inicio .text p { font-size: 16px; padding: 0 7%; }
+  #wrapper #content #inicio .action a { background-position: 45% 100%; bottom: 2%; left: 43%; width: 40px; height: 40px; }
+  #wrapper #content #genero, #wrapper #content #donde { background: transparent; }
+  #wrapper #content #genero .options, #wrapper #content #donde .options { top: 10%; width: 100%; }
+  #wrapper #content #genero .options .mujer, #wrapper #content #genero .options .hombre, #wrapper #content #genero .options .ciudad, #wrapper #content #genero .options .campo, #wrapper #content #donde .options .mujer, #wrapper #content #donde .options .hombre, #wrapper #content #donde .options .ciudad, #wrapper #content #donde .options .campo { margin: 15% 0 0 10%; width: 100%; }
+  #wrapper #content #genero .options .mujer img, #wrapper #content #genero .options .hombre img, #wrapper #content #genero .options .ciudad img, #wrapper #content #genero .options .campo img, #wrapper #content #donde .options .mujer img, #wrapper #content #donde .options .hombre img, #wrapper #content #donde .options .ciudad img, #wrapper #content #donde .options .campo img { border-radius: 10px; border: 2px solid #bdd52e; box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5); }
+  #wrapper #content #genero .options .mujer:hover, #wrapper #content #genero .options .hombre:hover, #wrapper #content #genero .options .ciudad:hover, #wrapper #content #genero .options .campo:hover, #wrapper #content #donde .options .mujer:hover, #wrapper #content #donde .options .hombre:hover, #wrapper #content #donde .options .ciudad:hover, #wrapper #content #donde .options .campo:hover { box-shadow: none; }
+  #wrapper #content #genero .options .mujer:hover img, #wrapper #content #genero .options .hombre:hover img, #wrapper #content #genero .options .ciudad:hover img, #wrapper #content #genero .options .campo:hover img, #wrapper #content #donde .options .mujer:hover img, #wrapper #content #donde .options .hombre:hover img, #wrapper #content #donde .options .ciudad:hover img, #wrapper #content #donde .options .campo:hover img { border: 2px solid #bdd52e; box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5); }
+  #wrapper #content #para { background: transparent; }
+  #wrapper #content #para .options { top: 5%; width: 100%; }
+  #wrapper #content #para .options .box { border: 2px solid #bdd52e; border-radius: 10px; margin-bottom: 20px; padding: 0; width: 90%; box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5); }
+  #wrapper #content #para .options .box a, #wrapper #content #para .options .box a:hover { text-decoration: none; }
+  #wrapper #content #para .options .box .divertirme, #wrapper #content #para .options .box .mantenerme, #wrapper #content #para .options .box .competir { margin: 0; padding: 0; }
+  #wrapper #content #para .options .box .divertirme img, #wrapper #content #para .options .box .mantenerme img, #wrapper #content #para .options .box .competir img { margin: 0 auto; }
+  #wrapper #content #para .options .box .divertirme:hover, #wrapper #content #para .options .box .mantenerme:hover, #wrapper #content #para .options .box .competir:hover { border: none; box-shadow: none; }
+  #wrapper #content #para .options .box .divertirme:hover h3, #wrapper #content #para .options .box .mantenerme:hover h3, #wrapper #content #para .options .box .competir:hover h3 { text-decoration: none; }
+  #wrapper #content #para .options .box .divertirme .box-mobile, #wrapper #content #para .options .box .mantenerme .box-mobile, #wrapper #content #para .options .box .competir .box-mobile { margin: 0 auto; }
+  #wrapper #content #para .options .box .divertirme .box-mobile h3, #wrapper #content #para .options .box .mantenerme .box-mobile h3, #wrapper #content #para .options .box .competir .box-mobile h3 { color: #0b273d; margin: 10px 0; text-align: center; }
+  #wrapper #content #para .options .box .text { padding: 0; }
+  #wrapper #content #para .options .box .text a { color: #1b354a; text-decoration: none; }
+  #wrapper #content #para .options .box .text h3 { font-size: 25px; margin-bottom: 0; }
+  #wrapper #content #para .options .box .text p { font-size: 16px; margin-top: 10px; }
+  #wrapper #content #para .volver a { bottom: 0; }
+  #wrapper #content #pisada { background: transparent; overflow: auto !important; overflow-x: hidden; }
+  #wrapper #content #pisada h4 { padding-top: 5px; font-size: 30px; margin-bottom: 5px; }
+  #wrapper #content #pisada .options { left: 0; margin: 0; top: 8%; width: 100%; }
+  #wrapper #content #pisada .options .instrucciones { margin-bottom: 35px; }
+  #wrapper #content #pisada .options .instrucciones .slick-dots { bottom: -22px; left: 0; list-style: outside none none; margin: 0 auto; padding: 0; position: absolute; right: 0; text-align: center; }
+  #wrapper #content #pisada .options .instrucciones .slick-dots li { display: inline-block; margin-right: 5px; }
+  #wrapper #content #pisada .options .instrucciones .slick-dots li button { background-color: #7d7d7d; border: medium none; border-radius: 50%; font-size: 0; height: 10px; margin: 0; padding: 0; width: 10px; }
+  #wrapper #content #pisada .options .instrucciones .slick-dots .slick-active button { background-color: #ADC91F; }
+  #wrapper #content #pisada .options .boxes { width: 80%; }
+  #wrapper #content #pisada .options .box { border: 2px solid #bdd52e; border-radius: 10px; margin: 2% 2% 2% 0; width: 100%; box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5); }
+  #wrapper #content #pisada .options .box .supinadora, #wrapper #content #pisada .options .box .neutra, #wrapper #content #pisada .options .box .pronadora { margin: 5px 0; padding: 0; }
+  #wrapper #content #pisada .options .box .supinadora .link img, #wrapper #content #pisada .options .box .neutra .link img, #wrapper #content #pisada .options .box .pronadora .link img { margin: 0 auto; }
+  #wrapper #content #pisada .options .box .supinadora:hover, #wrapper #content #pisada .options .box .neutra:hover, #wrapper #content #pisada .options .box .pronadora:hover { box-shadow: none; }
+  #wrapper #content #pisada .options .box .supinadora:hover img, #wrapper #content #pisada .options .box .neutra:hover img, #wrapper #content #pisada .options .box .pronadora:hover img { border: none; }
+  #wrapper #content #pisada .options .box .text { margin-top: 15px; font-size: 13px; padding: 0; }
+  #wrapper #content #pisada .options .box .text h3 { color: #0b273d; font-size: 24px; margin: 5px 0 3px 0; padding-left: 14px; }
+  #wrapper #content #pisada .options .box .text p { margin: 0; padding-left: 14px; width: 100%; }
+  #wrapper #content #pisada .volver a { bottom: 0%; } }
+@media only screen and (max-width: 44em) and (orientation: landscape) { #wrapper .wrapper_content #content #inicio { background: transparent; }
+  #wrapper .wrapper_content #content #inicio .text { top: 40%; }
+  #wrapper .wrapper_content #content #inicio .text h2 { font-size: 35px; }
+  #wrapper .wrapper_content #content #inicio .text p { padding: 0 28%; }
+  #wrapper .wrapper_content #content #genero .options .mujer, #wrapper .wrapper_content #content #genero .options .hombre, #wrapper .wrapper_content #content #genero .options .ciudad, #wrapper .wrapper_content #content #genero .options .campo, #wrapper .wrapper_content #content #donde .options .mujer, #wrapper .wrapper_content #content #donde .options .hombre, #wrapper .wrapper_content #content #donde .options .ciudad, #wrapper .wrapper_content #content #donde .options .campo { margin-top: 0; }
+  #wrapper .wrapper_content #content #genero .options .mujer img, #wrapper .wrapper_content #content #genero .options .hombre img, #wrapper .wrapper_content #content #genero .options .ciudad img, #wrapper .wrapper_content #content #genero .options .campo img, #wrapper .wrapper_content #content #donde .options .mujer img, #wrapper .wrapper_content #content #donde .options .hombre img, #wrapper .wrapper_content #content #donde .options .ciudad img, #wrapper .wrapper_content #content #donde .options .campo img { margin: 0 auto; }
+  #wrapper .wrapper_content #content #para .volver a { bottom: -60%; }
+  #wrapper .wrapper_content #content #pisada .options { top: 15%; }
+  #wrapper .wrapper_content #content #pisada .options .box .pronadora, #wrapper .wrapper_content #content #pisada .options .box .neutra, #wrapper .wrapper_content #content #pisada .options .box .supinadora { margin-top: 1%; }
+  #wrapper .wrapper_content #content #pisada .options .box .pronadora .link img, #wrapper .wrapper_content #content #pisada .options .box .neutra .link img, #wrapper .wrapper_content #content #pisada .options .box .supinadora .link img { margin: 0 auto; }
+  #wrapper .wrapper_content #content #pisada .volver a { bottom: -50%; } }
+@media only screen and (max-width: 20em) { #wrapper #content #genero .options .mujer, #wrapper #content #genero .options .hombre, #wrapper #content #genero .options .ciudad, #wrapper #content #genero .options .campo, #wrapper #content #donde .options .mujer, #wrapper #content #donde .options .hombre, #wrapper #content #donde .options .ciudad, #wrapper #content #donde .options .campo { margin: 15px 0; padding: 0 20px; }
+  #wrapper #content #para .volver a { bottom: -40%; }
+  #wrapper #content #pisada .volver a { bottom: -15%; } }

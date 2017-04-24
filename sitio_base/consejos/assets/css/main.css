@@ -1,0 +1,730 @@
+@font-face {
+  font-family: 'nova';
+  src: url("../fonts/proximaNova/proxima_nova_reg.eot");
+  src: url("../fonts/proximaNova/proxima_nova_reg.eot?#iefix") format("embedded-opentype"), url("../fonts/proximaNova/proxima_nova_reg.woff2") format("woff2"), url("../fonts/proximaNova/proxima_nova_reg.woff") format("woff"), url("../fonts/proximaNova/proxima_nova_reg.ttf") format("truetype"), url("../fonts/proximaNova/proxima_nova_reg.svg#nova") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'novaL';
+  src: url("../fonts/proximaNova/proxima_nova_light.eot");
+  src: url("../fonts/proximaNova/proxima_nova_light.eot?#iefix") format("embedded-opentype"), url("../fonts/proximaNova/proxima_nova_light.woff2") format("woff2"), url("../fonts/proximaNova/proxima_nova_light.woff") format("woff"), url("../fonts/proximaNova/proxima_nova_light.ttf") format("truetype"), url("../fonts/proximaNova/proxima_nova_light.svg#novaL") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'novaB';
+  src: url("../fonts/proximaNova/proxima_nova_bold.eot");
+  src: url("../fonts/proximaNova/proxima_nova_bold.eot?#iefix") format("embedded-opentype"), url("../fonts/proximaNova/proxima_nova_bold.woff2") format("woff2"), url("../fonts/proximaNova/proxima_nova_bold.woff") format("woff"), url("../fonts/proximaNova/proxima_nova_bold.ttf") format("truetype"), url("../fonts/proximaNova/proxima_nova_bold.svg#novaB") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'antonio';
+  src: url("../fonts/antonio/antonio-regular.eot");
+  src: url("../fonts/antonio/antonio-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/antonio/antonio-regular.woff2") format("woff2"), url("../fonts/antonio/antonio-regular.woff") format("woff"), url("../fonts/antonio/antonio-regular.ttf") format("truetype"), url("../fonts/antonio/antonio-regular.svg#antonio") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'antonioL';
+  src: url("../fonts/antonio/antonio-light.eot");
+  src: url("../fonts/antonio/antonio-light.eot?#iefix") format("embedded-opentype"), url("../fonts/antonio/antonio-light.woff2") format("woff2"), url("../fonts/antonio/antonio-light.woff") format("woff"), url("../fonts/antonio/antonio-light.ttf") format("truetype"), url("../fonts/antonio/antonio-light.svg#antonioL") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'antonioB';
+  src: url("../fonts/antonio/antonio-bold.eot");
+  src: url("../fonts/antonio/antonio-bold.eot?#iefix") format("embedded-opentype"), url("../fonts/antonio/antonio-bold.woff2") format("woff2"), url("../fonts/antonio/antonio-bold.woff") format("woff"), url("../fonts/antonio/antonio-bold.ttf") format("truetype"), url("../fonts/antonio/antonio-bold.svg#antonioB") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+/* Colors */
+/* Fonts */
+/* Fonts sizes */
+/* Animations */
+@-moz-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -moz-transform: translateY(0);
+    transform: translateY(0); }
+  40% {
+    -moz-transform: translateY(-5px);
+    transform: translateY(-5px); }
+  60% {
+    -moz-transform: translateY(-5px);
+    transform: translateY(-5px); } }
+@-webkit-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0); }
+  40% {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px); }
+  60% {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px); } }
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    transform: translateY(0); }
+  40% {
+    -moz-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px); }
+  60% {
+    -moz-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px); } }
+/** BASE STYLES **/
+body, html {
+  background-color: #fff;
+  font-family: "antonio", sans-serif;
+  font-size: 16px;
+  overflow-x: hidden; }
+  @media only screen and (max-width: 40em) {
+    body, html {
+      font-size: 14px; } }
+
+a, a:hover, a:focus {
+  outline: 0; }
+
+#wrapper-head .content-header {
+  background: url(../images/header_tenis_full.png) no-repeat 0 0 transparent;
+  background-size: 100%;
+  border-top: 1px solid #fff;
+  padding-bottom: 20px;
+  position: relative;
+  text-align: center; }
+  #wrapper-head .content-header .especial, #wrapper-head .content-header .consejos {
+    color: white;
+    display: inline-block;
+    font-family: 'antonio', sans-serif;
+    font-size: 24px;
+    margin: 70px 50px 0; }
+    #wrapper-head .content-header .especial a, #wrapper-head .content-header .consejos a {
+      text-decoration: none;
+      color: #fff; }
+      #wrapper-head .content-header .especial a span, #wrapper-head .content-header .consejos a span {
+        position: relative; }
+        #wrapper-head .content-header .especial a span::after, #wrapper-head .content-header .consejos a span::after {
+          background-color: #fff;
+          content: '';
+          height: 2px;
+          width: 100%;
+          position: absolute;
+          top: 25px;
+          left: 0; }
+  #wrapper-head .content-header .logo {
+    display: inline-block;
+    width: 160px;
+    vertical-align: middle; }
+#wrapper-head .categories {
+  padding: 0; }
+  #wrapper-head .categories .title {
+    color: #FFF;
+    font-family: 'antonio', sans-serif;
+    text-align: center;
+    text-transform: uppercase; }
+    #wrapper-head .categories .title h2 {
+      color: #1f2831;
+      font-size: 36px;
+      padding: 20px; }
+      #wrapper-head .categories .title h2 span {
+        color: #bdd52e; }
+  #wrapper-head .categories .tendencias {
+    padding: 0; }
+    #wrapper-head .categories .tendencias .wrapper-tend {
+      position: relative; }
+      #wrapper-head .categories .tendencias .wrapper-tend .tablet {
+        display: none; }
+      #wrapper-head .categories .tendencias .wrapper-tend .see-more {
+        background-color: rgba(255, 255, 255, 0.6);
+        color: #0c2539;
+        left: 0;
+        margin: 0 auto;
+        padding: 10px;
+        position: absolute;
+        right: 0;
+        text-align: center;
+        bottom: 6%;
+        width: 70%; }
+        #wrapper-head .categories .tendencias .wrapper-tend .see-more p {
+          font-size: 22px; }
+        #wrapper-head .categories .tendencias .wrapper-tend .see-more a {
+          border: 1px solid #0c2539;
+          color: #0c2539;
+          font-size: 22px;
+          padding: 5px 20px;
+          text-decoration: none;
+          -webkit-transition: 0.2s linear;
+          -moz-transition: 0.2s linear;
+          -ms-transition: 0.2s linear;
+          -o-transition: 0.2s linear;
+          transition: 0.2s linear; }
+          #wrapper-head .categories .tendencias .wrapper-tend .see-more a:hover {
+            background-color: #0c2539;
+            color: #FFF;
+            padding: 8px 25px; }
+  #wrapper-head .categories .corremos-punto {
+    padding: 0; }
+    #wrapper-head .categories .corremos-punto .box {
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 25px; }
+      #wrapper-head .categories .corremos-punto .box img {
+        -webkit-transition: all 0.5s linear;
+        -moz-transition: all 0.5s linear;
+        -ms-transition: all 0.5s linear;
+        -o-transition: all 0.5s linear;
+        transition: all 0.5s linear; }
+      #wrapper-head .categories .corremos-punto .box .mask {
+        background-color: rgba(11, 39, 62, 0.8);
+        position: absolute;
+        bottom: -77%;
+        left: 0;
+        height: 100%;
+        text-align: center;
+        color: #FFF;
+        font-family: 'antonioL', sans-serif;
+        padding: 10px;
+        width: 100%;
+        -webkit-transition: all 0.2s ease-in-out;
+        -moz-transition: all 0.2s ease-in-out;
+        -ms-transition: all 0.2s ease-in-out;
+        -o-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out; }
+        #wrapper-head .categories .corremos-punto .box .mask .subtitle {
+          position: relative;
+          padding: 5px 0 15px 0; }
+          #wrapper-head .categories .corremos-punto .box .mask .subtitle h4 {
+            font-size: 21px;
+            margin: 3px; }
+          #wrapper-head .categories .corremos-punto .box .mask .subtitle p {
+            margin: 0 3px 10px; }
+          #wrapper-head .categories .corremos-punto .box .mask .subtitle::after {
+            background-color: #FFF;
+            content: '';
+            height: 1px;
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            bottom: 0;
+            width: 20%; }
+        #wrapper-head .categories .corremos-punto .box .mask .text {
+          padding: 20px; }
+          #wrapper-head .categories .corremos-punto .box .mask .text p {
+            font-size: 14px; }
+        #wrapper-head .categories .corremos-punto .box .mask span {
+          padding: 30px 0;
+          position: relative;
+          vertical-align: bottom;
+          color: #bdd52e;
+          text-decoration: none; }
+          #wrapper-head .categories .corremos-punto .box .mask span::after {
+            content: '>';
+            height: 15px;
+            line-height: 0;
+            position: relative;
+            right: -5px;
+            width: 15px;
+            -webkit-transition: 0.2s linear;
+            -moz-transition: 0.2s linear;
+            -ms-transition: 0.2s linear;
+            -o-transition: 0.2s linear;
+            transition: 0.2s linear; }
+          #wrapper-head .categories .corremos-punto .box .mask span:hover::after {
+            right: -8px; }
+      #wrapper-head .categories .corremos-punto .box:hover img {
+        -webkit-transform: scale(1.1);
+        -moz-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        -o-transform: scale(1.1);
+        transform: scale(1.1); }
+      #wrapper-head .categories .corremos-punto .box:hover .mask {
+        bottom: 0; }
+      #wrapper-head .categories .corremos-punto .box.saber .mask {
+        bottom: -60%;
+        text-align: left; }
+        #wrapper-head .categories .corremos-punto .box.saber .mask .subtitle {
+          position: relative; }
+          #wrapper-head .categories .corremos-punto .box.saber .mask .subtitle h4 {
+            font-size: 32px; }
+          #wrapper-head .categories .corremos-punto .box.saber .mask .subtitle p {
+            font-size: 17.5px; }
+          #wrapper-head .categories .corremos-punto .box.saber .mask .subtitle::after {
+            height: 0px; }
+        #wrapper-head .categories .corremos-punto .box.saber .mask span {
+          color: #bdd52e;
+          right: 70px;
+          top: 10px;
+          position: absolute; }
+          #wrapper-head .categories .corremos-punto .box.saber .mask span::after {
+            padding-left: 5px;
+            content: '>';
+            height: 15px;
+            width: 15px;
+            position: relative;
+            right: -5px;
+            -webkit-transition: 0.2s linear;
+            -moz-transition: 0.2s linear;
+            -ms-transition: 0.2s linear;
+            -o-transition: 0.2s linear;
+            transition: 0.2s linear; }
+          #wrapper-head .categories .corremos-punto .box.saber .mask span:hover::after {
+            right: -8px; }
+      #wrapper-head .categories .corremos-punto .box.saber:hover .mask {
+        bottom: -130px; }
+
+.content-footer {
+  text-align: center; }
+  .content-footer .title {
+    font-family: 'antonio', sans-serif;
+    text-align: center;
+    margin: 35px 0; }
+    .content-footer .title h2 {
+      text-transform: uppercase;
+      font-size: 31px; }
+      .content-footer .title h2 span {
+        color: #bdd52e; }
+  .content-footer .fitness {
+    margin-bottom: 80px; }
+    .content-footer .fitness .box-footer {
+      overflow: hidden;
+      position: relative; }
+      .content-footer .fitness .box-footer .mask {
+        background-color: rgba(11, 39, 62, 0.8);
+        text-align: left;
+        top: 160px;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0; }
+        .content-footer .fitness .box-footer .mask span {
+          top: 13%;
+          position: absolute;
+          right: 50px;
+          color: #FFF;
+          font-size: 19px;
+          font-family: 'antonioL', sans-serif; }
+          .content-footer .fitness .box-footer .mask span::after {
+            padding-left: 5px;
+            content: '>';
+            height: 19px;
+            width: 19px;
+            position: relative;
+            right: -5px;
+            -webkit-transition: 0.2s linear;
+            -moz-transition: 0.2s linear;
+            -ms-transition: 0.2s linear;
+            -o-transition: 0.2s linear;
+            transition: 0.2s linear; }
+          .content-footer .fitness .box-footer .mask span:hover::after {
+            right: -8px; }
+          .content-footer .fitness .box-footer .mask span:hover {
+            color: #bdd52e; }
+        .content-footer .fitness .box-footer .mask p {
+          margin: 15px;
+          color: #FFF;
+          font-size: 19px;
+          font-family: 'antonioL', sans-serif;
+          text-align: center; }
+
+@media screen and (min-width: 40.1em) and (max-width: 64em) {
+  .content {
+    width: 100%;
+    padding: 0; }
+
+  #wrapper-head .content-header {
+    padding-bottom: 0; }
+    #wrapper-head .content-header .volver {
+      left: 5px; }
+    #wrapper-head .content-header .especial, #wrapper-head .content-header .consejos {
+      margin: 40px 50px 0; }
+    #wrapper-head .content-header .logo {
+      margin: 0 auto;
+      width: 18%; }
+  #wrapper-head .categories .tendencias .wrapper-tend {
+    width: 100%;
+    background-color: #fff; }
+    #wrapper-head .categories .tendencias .wrapper-tend .full {
+      display: none; }
+    #wrapper-head .categories .tendencias .wrapper-tend .tablet {
+      display: block; }
+    #wrapper-head .categories .tendencias .wrapper-tend .see-more {
+      width: 50%;
+      left: 48%;
+      margin: 0px;
+      right: 0px;
+      float: right;
+      top: 25%; }
+      #wrapper-head .categories .tendencias .wrapper-tend .see-more a {
+        font-size: 25px;
+        padding: 10px 20px 7px; }
+        #wrapper-head .categories .tendencias .wrapper-tend .see-more a:hover {
+          padding: 13px 20px 10px; }
+      #wrapper-head .categories .tendencias .wrapper-tend .see-more p {
+        font-size: 28px; }
+  #wrapper-head .categories .corremos-punto .box img {
+    transition: none; }
+  #wrapper-head .categories .corremos-punto .box .mask {
+    bottom: -267px;
+    padding: 20px 10px;
+    -webkit-transition: 0.2s linear;
+    -moz-transition: 0.2s linear;
+    -ms-transition: 0.2s linear;
+    -o-transition: 0.2s linear;
+    transition: 0.2s linear; }
+    #wrapper-head .categories .corremos-punto .box .mask .subtitle h4 {
+      font-size: 28px; }
+    #wrapper-head .categories .corremos-punto .box .mask .text {
+      padding: 80px 20px 20px 20px; }
+      #wrapper-head .categories .corremos-punto .box .mask .text p {
+        font-size: 20px; }
+    #wrapper-head .categories .corremos-punto .box .mask span {
+      font-size: 22px; }
+      #wrapper-head .categories .corremos-punto .box .mask span::after {
+        top: -3px; }
+    #wrapper-head .categories .corremos-punto .box .mask:hover img {
+      -webkit-transform: none;
+      -moz-transform: none;
+      -ms-transform: none;
+      -o-transform: none;
+      transform: none; }
+  #wrapper-head .categories .corremos-punto .box.saber {
+    margin-bottom: 0; }
+    #wrapper-head .categories .corremos-punto .box.saber .mask {
+      bottom: -190px; }
+      #wrapper-head .categories .corremos-punto .box.saber .mask .subtitle h4 {
+        font-size: 35px;
+        margin: 2px 15px; }
+      #wrapper-head .categories .corremos-punto .box.saber .mask .subtitle p {
+        font-size: 23px;
+        margin: 2px 15px; }
+      #wrapper-head .categories .corremos-punto .box.saber .mask span {
+        font-size: 21px;
+        right: 100px;
+        top: 17px; }
+        #wrapper-head .categories .corremos-punto .box.saber .mask span::after {
+          top: -2px; }
+      #wrapper-head .categories .corremos-punto .box.saber .mask:hover {
+        bottom: -190px; }
+    #wrapper-head .categories .corremos-punto .box.saber:hover .mask {
+      bottom: -190px; }
+
+  .wrapper-footer .title {
+    padding: 0 8%; }
+  .wrapper-footer .content {
+    padding-top: 1%; }
+    .wrapper-footer .content .content-footer .fitness {
+      margin-bottom: 30px; }
+      .wrapper-footer .content .content-footer .fitness .fitness-blog {
+        margin-bottom: 20px;
+        padding: 0 15px; }
+        .wrapper-footer .content .content-footer .fitness .fitness-blog .mask {
+          padding-top: 0;
+          top: 65%; }
+          .wrapper-footer .content .content-footer .fitness .fitness-blog .mask span {
+            font-size: 23px;
+            top: 12%;
+            right: 10%; }
+          .wrapper-footer .content .content-footer .fitness .fitness-blog .mask img {
+            margin: 5px; }
+      .wrapper-footer .content .content-footer .fitness .fitness-tenis {
+        padding: 0 16px 0 0;
+        margin: 0; }
+        .wrapper-footer .content .content-footer .fitness .fitness-tenis .mask {
+          padding-top: 0;
+          top: 65%; }
+          .wrapper-footer .content .content-footer .fitness .fitness-tenis .mask p {
+            font-size: 28px;
+            margin: 25px 50px; }
+      .wrapper-footer .content .content-footer .fitness .fitness-runner {
+        padding: 0 16px 0 0; }
+        .wrapper-footer .content .content-footer .fitness .fitness-runner .mask {
+          padding-top: 0;
+          top: 65%; }
+          .wrapper-footer .content .content-footer .fitness .fitness-runner .mask p {
+            font-size: 28px;
+            margin: 25px 50px; } }
+@media screen and (min-width: 40.1em) and (max-width: 64em) and (orientation: landscape) {
+  .content {
+    width: 100%; }
+
+  #wrapper-head .content-header {
+    padding: 0 50px; }
+  #wrapper-head .categories {
+    padding: 0 4%; }
+    #wrapper-head .categories .tendencias .wrapper-tend .tablet {
+      display: none; }
+    #wrapper-head .categories .tendencias .wrapper-tend .full {
+      display: block; }
+    #wrapper-head .categories .tendencias .wrapper-tend .see-more {
+      width: 100%;
+      height: 120px;
+      left: 0;
+      margin: 0 auto;
+      right: 0;
+      top: 70%; }
+      #wrapper-head .categories .tendencias .wrapper-tend .see-more p {
+        font-size: 22px; }
+      #wrapper-head .categories .tendencias .wrapper-tend .see-more a {
+        font-size: 23px;
+        padding: 8px 15px 5px; }
+        #wrapper-head .categories .tendencias .wrapper-tend .see-more a:hover {
+          padding: 8px 15px 5px; }
+    #wrapper-head .categories .corremos-punto .box .mask {
+      bottom: -145px;
+      padding: 10px; }
+      #wrapper-head .categories .corremos-punto .box .mask .subtitle h4 {
+        font-size: 16px; }
+      #wrapper-head .categories .corremos-punto .box .mask .text {
+        padding: 15px 5px 5px; }
+        #wrapper-head .categories .corremos-punto .box .mask .text p {
+          font-size: 13px; }
+      #wrapper-head .categories .corremos-punto .box .mask span {
+        font-size: 14px; }
+        #wrapper-head .categories .corremos-punto .box .mask span:after {
+          top: 0; }
+    #wrapper-head .categories .corremos-punto .box.saber {
+      margin-bottom: 25px; }
+      #wrapper-head .categories .corremos-punto .box.saber .mask {
+        bottom: -100px; }
+        #wrapper-head .categories .corremos-punto .box.saber .mask .subtitle h4 {
+          font-size: 25px;
+          margin: 3px 10px; }
+        #wrapper-head .categories .corremos-punto .box.saber .mask .subtitle p {
+          font-size: 14px;
+          margin: 3px 10px; }
+        #wrapper-head .categories .corremos-punto .box.saber .mask span {
+          right: 50px;
+          top: 0px;
+          font-size: 16px; }
+        #wrapper-head .categories .corremos-punto .box.saber .mask:hover {
+          bottom: -100px; }
+      #wrapper-head .categories .corremos-punto .box.saber:hover .mask {
+        bottom: -100px; }
+
+  .wrapper-footer {
+    padding: 0 4%; }
+    .wrapper-footer .content {
+      padding-top: 1%; }
+      .wrapper-footer .content .content-footer .fitness {
+        margin-bottom: 30px; }
+        .wrapper-footer .content .content-footer .fitness .fitness-blog {
+          width: 50%;
+          padding: 0 15px; }
+          .wrapper-footer .content .content-footer .fitness .fitness-blog .box-footer {
+            height: 212px; }
+          .wrapper-footer .content .content-footer .fitness .fitness-blog .mask {
+            padding-top: 0;
+            top: 70%; }
+            .wrapper-footer .content .content-footer .fitness .fitness-blog .mask span {
+              font-size: 20px;
+              top: 10%;
+              right: 30px; }
+            .wrapper-footer .content .content-footer .fitness .fitness-blog .mask img {
+              margin: 0; }
+        .wrapper-footer .content .content-footer .fitness .fitness-tenis {
+          padding: 0 16px 0 0;
+          margin: 0; }
+          .wrapper-footer .content .content-footer .fitness .fitness-tenis .mask {
+            padding-top: 0;
+            top: 70%; }
+            .wrapper-footer .content .content-footer .fitness .fitness-tenis .mask p {
+              font-size: 18px;
+              margin: 10px; }
+        .wrapper-footer .content .content-footer .fitness .fitness-runner {
+          padding: 0 16px 0 0; }
+          .wrapper-footer .content .content-footer .fitness .fitness-runner .mask {
+            padding-top: 0;
+            top: 70%; }
+            .wrapper-footer .content .content-footer .fitness .fitness-runner .mask p {
+              font-size: 18px;
+              top: 40px;
+              margin: 10px; } }
+@media only screen and (max-width: 44em) {
+  #wrapper-head .content-header {
+    background: url(../images/header_tenis_mobile.png) no-repeat 0 0 transparent;
+    background-size: 100%;
+    padding-left: 3%;
+    padding-bottom: 0; }
+    #wrapper-head .content-header .especial, #wrapper-head .content-header .consejos {
+      margin: 0;
+      font-size: 17px; }
+      #wrapper-head .content-header .especial a span::after, #wrapper-head .content-header .consejos a span::after {
+        top: 17px; }
+    #wrapper-head .content-header .logo {
+      width: 80px; }
+  #wrapper-head .content {
+    width: 100%;
+    margin: 0;
+    padding: 0; }
+  #wrapper-head .categories .title h2 {
+    font-size: 21px;
+    margin: 10px 0 5px 0;
+    padding: 0; }
+  #wrapper-head .categories .tendencias .wrapper-tend {
+    width: 100%;
+    background-color: #fff; }
+    #wrapper-head .categories .tendencias .wrapper-tend .see-more {
+      width: 60%;
+      left: 35%;
+      top: 10%; }
+      #wrapper-head .categories .tendencias .wrapper-tend .see-more p {
+        font-size: 15px;
+        margin-bottom: 5px; }
+      #wrapper-head .categories .tendencias .wrapper-tend .see-more a {
+        padding: 5px 8px 1px 8px;
+        font-size: 15px; }
+        #wrapper-head .categories .tendencias .wrapper-tend .see-more a:hover {
+          padding: 5px 8px 1px 8px;
+          border: 1px solid #0c2539;
+          color: #0c2539;
+          background: #FFF; }
+  #wrapper-head .categories .corremos-punto .box-test {
+    padding-right: 2px; }
+  #wrapper-head .categories .corremos-punto .box-carreras {
+    padding-left: 2px; }
+  #wrapper-head .categories .corremos-punto .box {
+    margin-bottom: 4px; }
+    #wrapper-head .categories .corremos-punto .box .mask {
+      padding: 5% 0;
+      top: 63%; }
+      #wrapper-head .categories .corremos-punto .box .mask .subtitle {
+        text-align: center;
+        padding-bottom: 0; }
+        #wrapper-head .categories .corremos-punto .box .mask .subtitle h4 {
+          font-size: 14px;
+          margin: 0 0 5px 0; }
+        #wrapper-head .categories .corremos-punto .box .mask .subtitle::after {
+          content: '';
+          height: 0; }
+      #wrapper-head .categories .corremos-punto .box .mask .text {
+        display: none; }
+      #wrapper-head .categories .corremos-punto .box .mask span {
+        padding: 0;
+        font-size: 12px; }
+        #wrapper-head .categories .corremos-punto .box .mask span:hover::after {
+          right: -5px; }
+    #wrapper-head .categories .corremos-punto .box.saber .mask {
+      top: 60%;
+      padding-top: 7px; }
+      #wrapper-head .categories .corremos-punto .box.saber .mask .subtitle {
+        text-align: left; }
+        #wrapper-head .categories .corremos-punto .box.saber .mask .subtitle h4 {
+          font-size: 23px;
+          margin: 0 6px; }
+        #wrapper-head .categories .corremos-punto .box.saber .mask .subtitle p {
+          font-size: 14px;
+          margin: 0 6px 5px; }
+      #wrapper-head .categories .corremos-punto .box.saber .mask span {
+        right: 25px;
+        top: 18%;
+        font-size: 14px; }
+        #wrapper-head .categories .corremos-punto .box.saber .mask span:hover::after {
+          right: -5px; }
+
+  .content-footer .title {
+    margin: 10px; }
+    .content-footer .title h2 {
+      margin: 0;
+      font-size: 20px; }
+  .content-footer .fitness {
+    margin-bottom: 40px; }
+    .content-footer .fitness .fitness-blog, .content-footer .fitness .fitness-tenis, .content-footer .fitness .fitness-runner {
+      padding: 0 2% 2%; }
+    .content-footer .fitness .fitness-blog {
+      padding-right: 0; }
+      .content-footer .fitness .fitness-blog a {
+        display: block;
+        text-align: center; }
+      .content-footer .fitness .fitness-blog .box-footer .mask {
+        padding: 6%;
+        top: 60%; }
+        .content-footer .fitness .fitness-blog .box-footer .mask span {
+          right: 20%;
+          top: 27%; }
+    .content-footer .fitness .fitness-tenis .box-footer .mask, .content-footer .fitness .fitness-runner .box-footer .mask {
+      top: 65%; }
+      .content-footer .fitness .fitness-tenis .box-footer .mask p, .content-footer .fitness .fitness-runner .box-footer .mask p {
+        margin: 4% 0;
+        font-size: 18px; } }
+@media only screen and (max-width: 44em) and (orientation: landscape) {
+  #wrapper-head .categories .tendencias .wrapper-tend {
+    background-color: #fff;
+    width: 80%;
+    margin: 0 auto; }
+    #wrapper-head .categories .tendencias .wrapper-tend .see-more {
+      top: 15%;
+      left: 36%; }
+      #wrapper-head .categories .tendencias .wrapper-tend .see-more p {
+        font-size: 16px;
+        margin-bottom: 10px; }
+      #wrapper-head .categories .tendencias .wrapper-tend .see-more a {
+        padding: 6px 10px;
+        font-size: 16px; }
+        #wrapper-head .categories .tendencias .wrapper-tend .see-more a:hover {
+          padding: 6px 10px; }
+  #wrapper-head .categories .corremos-punto .horz {
+    width: 80%;
+    margin: 0 auto; }
+  #wrapper-head .categories .corremos-punto .box {
+    margin-bottom: 25px; }
+    #wrapper-head .categories .corremos-punto .box .mask {
+      padding: 6px 0;
+      top: 70%; }
+      #wrapper-head .categories .corremos-punto .box .mask .subtitle {
+        text-align: center;
+        padding-bottom: 0; }
+        #wrapper-head .categories .corremos-punto .box .mask .subtitle h4 {
+          font-size: 17px; }
+        #wrapper-head .categories .corremos-punto .box .mask .subtitle::after {
+          content: '';
+          height: 0; }
+      #wrapper-head .categories .corremos-punto .box .mask .text {
+        display: none; }
+      #wrapper-head .categories .corremos-punto .box .mask span {
+        padding: 0;
+        font-size: 13px; }
+        #wrapper-head .categories .corremos-punto .box .mask span:hover::after {
+          right: -5px; }
+    #wrapper-head .categories .corremos-punto .box.saber .mask {
+      top: 68%;
+      padding-top: 7px; }
+      #wrapper-head .categories .corremos-punto .box.saber .mask .subtitle {
+        text-align: left; }
+        #wrapper-head .categories .corremos-punto .box.saber .mask .subtitle h4 {
+          font-size: 20px;
+          margin: 0 15px 5px; }
+        #wrapper-head .categories .corremos-punto .box.saber .mask .subtitle p {
+          font-size: 12px;
+          margin: 0 15px 5px; }
+      #wrapper-head .categories .corremos-punto .box.saber .mask span {
+        right: 10%;
+        top: 13;
+        font-size: 14px; }
+        #wrapper-head .categories .corremos-punto .box.saber .mask span:hover::after {
+          right: -5px; }
+  #wrapper-head .categories .corremos-punto .box-test {
+    padding: 5px 5px 5px 0; }
+  #wrapper-head .categories .corremos-punto .box-carreras {
+    padding: 5px 0 5px 5px; }
+  #wrapper-head .categories .corremos-punto .box-saber {
+    padding: 0;
+    margin-top: -20px; }
+
+  .wrapper-footer .content {
+    margin-bottom: 15px;
+    padding: 0; }
+    .wrapper-footer .content .content-footer .title, .wrapper-footer .content .content-footer .fitness {
+      width: 80%;
+      margin: 0 auto;
+      margin-bottom: 20px; }
+    .wrapper-footer .content .content-footer .fitness .fitness-tenis .box-footer .mask, .wrapper-footer .content .content-footer .fitness .fitness-runner .box-footer .mask {
+      top: 70%; }
+      .wrapper-footer .content .content-footer .fitness .fitness-tenis .box-footer .mask p, .wrapper-footer .content .content-footer .fitness .fitness-runner .box-footer .mask p {
+        padding: 0 5%; }
+    .wrapper-footer .content .content-footer .fitness .fitness-blog .box-footer .mask span {
+      right: 30%; } }
+
+/*# sourceMappingURL=main.css.map */
