@@ -113,5 +113,24 @@ img, img:hover, img:focus { outline: none; }
 #wrapper-content .mod__categories .caption h2 { text-align: center; padding: 0 11px; color: white; -webkit-font-smoothing: antialiased; }
 #wrapper-content .mod__categories .caption p { color: white; text-align: center; }
 #wrapper-content .mod__products { padding-top: 20px; }
-#wrapper-content .mod__products .mod__products_header { padding: 20px 0px; background-color: white; color: gray; }
-#wrapper-content .mod__products .mod__products_header h3 { font-weight: 200; }
+#wrapper-content .mod__products .row { background-color: white; }
+#wrapper-content .mod__products .row .mod__products_header { padding: 38px 60px 0; color: #8fca00; }
+#wrapper-content .mod__products .row .mod__products_header h3 { font-weight: 200; }
+#wrapper-content .mod__products .row .mod__products_section .mod__products_section_description { border: 1px solid #f0f0f0; }
+#wrapper-content .mod__products .row .mod__products_section .mod__products_section_description h5 { color: #888; }
+#wrapper-content .mod__products .row .mod__products_section .mod__products_section_description p { margin-top: 6px; min-height: 2.7em; }
+#wrapper-content .mod__products .row .mod__products_section .mod__products_section_description .mod__products_content_price_promo_product--red p { color: #e4022d; }
+#wrapper-content .mod__products .row .mod__products_section .mod__products_section_description .mod__products_content_price_promo_product--red span { color: black; }
+#wrapper-content .mod__products .row .mod__products_section .mod__products_section_description .mod__products_content_price_normal_product p { padding-bottom: 6px; }
+#wrapper-content .mod__products .row .mod__products_footer { padding: 38px 60px 0; }
+#wrapper-content .mod__products .row .mod__products_footer .mod__products_footer_button { padding: 0px 5px; }
+#wrapper-content .mod__products .row .mod__products_footer .mod__products_footer_button button { margin-bottom: 20px; min-width: 140px; background: #f9f9f9; color: #bbb; }
+#wrapper-content .mod__brands { padding-top: 20px; }
+#wrapper-content .mod__brands .row { background-color: white; }
+#wrapper-content .mod__brands .row .mod__brands_header { padding: 38px 60px 0; color: #8fca00; }
+#wrapper-content .mod__brands .row .mod__brands_header h3 { font-weight: 200; }
+#wrapper-content .mod__brands .row .mod__brands_brands .mod__brands_brand_description { border: 1px solid #f0f0f0; }
+#wrapper-content .mod__brands .row .mod__brands_brands .mod__brands_brand_description .mod__brands_img a { background-color: transparent; }
+#wrapper-content .mod__brands .row .mod__brands_brands .mod__brands_brand_description .mod__brands_img img { max-width: 100%; opacity: .5; -webkit-transition: all .3s ease; transition: all .3s ease; }
+#wrapper-content .mod__brands .row .mod__brands_brands .mod__brands_brand_description .mod__brands_img img:hover { opacity: inherit; }
+#wrapper-content .mod__brands .row .mod__brands_footer { padding: 20px 60px 15px; }
