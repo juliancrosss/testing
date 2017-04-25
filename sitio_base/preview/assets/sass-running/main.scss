@@ -14,6 +14,37 @@ html, body {
   overflow-x:hidden;
 }
 
+body{
+  font-family: Lato,sans-serif;
+    font-weight: 400;
+    background: #eee;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    position: relative;
+  &:before{
+        background: #fafafa;
+    background: linear-gradient(135deg,#fafafa,#fdfdfd);
+    width: 200vw;
+    height: 100vw;
+    right: -140vw;
+    top: -50vw;
+    -webkit-transform: translateZ(0) rotate(-45deg);
+    transform: translateZ(0) rotate(-45deg);
+    z-index: 1;
+  }
+  &:after{
+    width: 100%;
+    height: 600px;
+    left: 0;
+    top: 0;
+    background: #eee;
+    background: linear-gradient(180deg,#fcfcfc,#eee);
+    z-index: 0;
+  }
+}
+
+
 *, *:hover, *:focus{outline: none;}
 a, a:hover, a:focus{outline: none;} 
 button, button:hover, button:focus{outline: none;} 
@@ -25,14 +56,14 @@ img, img:hover, img:focus{outline: none;}
 }
 
 #wrapper-content{
-  background-image: url("../images/background-tenis.jpg?V=2017");
+  //background-image: url("../images/background-tenis.jpg?V=2017");
   /* Full height */
   height: 100%;
   /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  //background-attachment: fixed;
+  //background-position: center;
+  //background-repeat: no-repeat;
+  //background-size: cover;
   padding-bottom: 40px;
   padding-top: 30px;
   .mod__nav{
@@ -118,7 +149,7 @@ img, img:hover, img:focus{outline: none;}
     .row{
       background-color: white;
       .mod__products_header{
-        padding: 38px 60px 0;
+        padding: 25px 60px 10px;
         color: #8fca00;
         h3{
           font-weight: 200;
@@ -127,16 +158,29 @@ img, img:hover, img:focus{outline: none;}
       .mod__products_section{
         .mod__products_section_description{
           border: 1px solid #f0f0f0;
+          padding: 0px;
+          .mod__products_content_head{
+            margin: 20px;
+          }
           h5{
             color: #888;
-            font-weight: 200;
+            font-weight: 700;
+            font-size: 0.8rem;
+            line-height: 1.7rem;
           }
           p{
             margin-top: 6px;
             min-height: 2.7em;
-            font-weight: 300;
+            font-weight: 400;
+          }
+          .mod__products_content_name_product{
+            padding: 15px;
+          }
+          .mod__products_content_descrition_product{
+            padding: 15px;
           }
           .mod__products_content_price_promo_product--red{
+            padding: 15px;
             p{
               color: #e4022d;
             }
@@ -145,16 +189,31 @@ img, img:hover, img:focus{outline: none;}
             }
           }
           .mod__products_content_price_normal_product{
+            padding: 15px;
             p{
               padding-bottom: 6px;
+            }
+          }
+          .mod__products_content_view_product{
+            h6{
+              color: #FFF;
+              background-color: #333;
+              text-transform: uppercase;
+              padding: 10px;
+              margin: 0px;
+              font-weight: 900;
+              font-size: 0.8rem;
             }
           }
         }
       }
       .mod__products_footer{
-        padding: 38px 60px 0;
+        padding: 20px 60px 0;
         .mod__products_footer_button{
           padding: 0px 5px;
+          a{
+            color: #bbb;
+          }
           button{
             margin-bottom: 20px;
             min-width: 140px;
@@ -170,7 +229,7 @@ img, img:hover, img:focus{outline: none;}
     .row{
       background-color: white;
       .mod__brands_header{
-        padding: 38px 60px 0;
+        padding: 25px 60px 10px;
         color: #8fca00;
         h3{
           font-weight: 200;
@@ -198,6 +257,11 @@ img, img:hover, img:focus{outline: none;}
         padding: 20px 60px 15px;
         h5{
           font-weight: 200;
+          font-size: 1rem;
+          i{
+            font-weight: 100;
+            font-size: 0.9rem;
+          }
         }
       }
     }
@@ -206,8 +270,12 @@ img, img:hover, img:focus{outline: none;}
     padding-top: 20px;
     .row{
       //background-color: white;
-      .mod__trends_content{
+      .align-self-center{
+        padding: 0px;
+      }
+      div.mod__trends_content.mod__trends_content--absolute{
         //border: 1px solid green;
+        width: 75%;
       }
       .mod__trends_content_header{
         background-color: white;
@@ -223,12 +291,14 @@ img, img:hover, img:focus{outline: none;}
       }
       .mod__trends_content--relative{
         position: relative;
+        max-width: 900px;
+        width: 800px;
       }
       .mod__trends_content--absolute{
         background-color: white;
         padding: 20px;
         position: absolute;
-        right: 80px;
+        right: -20px;
         top: 20px;
         width: 100%;
         border-bottom: 4px solid #8fca00;
@@ -316,10 +386,20 @@ img, img:hover, img:focus{outline: none;}
 }
 
 .mod__footer{
-  padding-top: 20px;
-  background-image: url();
+  background-image: url("../images/brands.jpg?V=2017");
+  /* Full height */
+  height: 100%;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  //background-repeat: no-repeat;
+  //background-size: cover;
+  padding-top: 5px;
   .row{
-    background-color: black;
+    //background-color: black;
+    .col-without_padding{
+      padding: 0px;
+    }
     .line{
       border-bottom: 2px solid rgb(143, 202, 0);
       margin-bottom: 2px;
