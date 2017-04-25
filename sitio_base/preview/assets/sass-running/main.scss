@@ -81,7 +81,7 @@ img, img:hover, img:focus{outline: none;}
         -webkit-font-smoothing: antialiased;
       }
       span{
-        color: green;
+        color: rgb(143, 202, 0);
       }
     }
   }
@@ -129,10 +129,12 @@ img, img:hover, img:focus{outline: none;}
           border: 1px solid #f0f0f0;
           h5{
             color: #888;
+            font-weight: 200;
           }
           p{
             margin-top: 6px;
             min-height: 2.7em;
+            font-weight: 300;
           }
           .mod__products_content_price_promo_product--red{
             p{
@@ -194,6 +196,146 @@ img, img:hover, img:focus{outline: none;}
       }
       .mod__brands_footer{
         padding: 20px 60px 15px;
+        h5{
+          font-weight: 200;
+        }
+      }
+    }
+  }
+  .mod__trends{
+    padding-top: 20px;
+    .row{
+      //background-color: white;
+      .mod__trends_content{
+        //border: 1px solid green;
+      }
+      .mod__trends_content_header{
+        background-color: white;
+        border-bottom: 2px solid #f0f0f0;
+        padding-bottom: 10px;
+        h4{
+          color: black;
+          font-weight: 200;
+          span{
+            color: #8fca00;
+          }
+        }
+      }
+      .mod__trends_content--relative{
+        position: relative;
+      }
+      .mod__trends_content--absolute{
+        background-color: white;
+        padding: 20px;
+        position: absolute;
+        right: 80px;
+        top: 20px;
+        width: 100%;
+        border-bottom: 4px solid #8fca00;
+        #diamond {
+            width: 0;
+            height: 0;
+            border: 20px solid transparent;
+            border-bottom-color: #8fca00;
+            position: relative;
+            top: 40px;
+            left: -40px;
+          }
+          #diamond:after {
+            content: '';
+            position: absolute;
+            left: -20px;
+            top: 20px;
+            width: 0;
+            height: 0;
+            border: 20px solid transparent;
+            border-top-color: #8fca00;
+          }
+        .mod__trends_content_description{
+          padding: 15px 0px;
+          p{
+            padding: 15px 0px;
+            font-weight: 300;
+          }
+          button{
+            background-color: black;
+            color: white;
+            width: 100%;
+            font-weight: 200;
+            padding: 10px 100px;
+          }
+        }
+      }
+    }
+  }
+  .mod__cards{
+    padding-top: 5px;
+    .row{
+      background-color: white;
+      .mod__cards_row{
+        .mod__cards_description_head{
+          padding: 15px;
+          h6{
+            font-weight: 700;
+            letter-spacing: .075em;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+          }
+        }
+        .mod__cards_description_content{
+          padding: 15px;
+          p{
+            font-family: Droid Serif,serif;
+            font-weight: 400;
+            font-style: italic;
+          }
+        }
+        .mod__cards_description_link{
+          padding: 15px;
+          button{
+            background-color: white;
+            font-weight: 100;
+            span{
+              font-weight: bolder;
+            }
+          }
+        }
+        .mod__card_content{
+          border: 1px solid #f0f0f0;
+          padding: 0px;
+        }
+        .mod__card_content--left{
+          padding-left: 1px;
+        }
+        .mod__card_content--right{
+          padding-right: 1px;
+        }
+      }
+    }
+  }
+}
+
+.mod__footer{
+  padding-top: 20px;
+  background-image: url();
+  .row{
+    background-color: black;
+    .line{
+      border-bottom: 2px solid rgb(143, 202, 0);
+      margin-bottom: 2px;
+      .line2{
+        border-bottom: 2px solid rgb(143, 202, 0);
+        margin-bottom: 2px;
+        .line3{
+          border-bottom: 2px solid rgb(143, 202, 0);
+          margin-bottom: 2px;
+          h2{
+            color: white;
+          }
+          span{
+            color: rgb(143, 202, 0);
+          }
+        }
       }
     }
   }

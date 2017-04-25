@@ -105,7 +105,7 @@ img, img:hover, img:focus { outline: none; }
 #wrapper-content .mod__header .thumbnail { border: 0 none; box-shadow: none; margin: 0; padding: 0; }
 #wrapper-content .mod__header .caption { width: 100%; bottom: .3rem; position: absolute; }
 #wrapper-content .mod__header .caption h2 { background-color: black; padding: 0 15px; color: white; -webkit-font-smoothing: antialiased; }
-#wrapper-content .mod__header .caption span { color: #8fca00; }
+#wrapper-content .mod__header .caption span { color: green; }
 #wrapper-content .mod__categories { padding-top: 20px; }
 #wrapper-content .mod__categories .thumbnail { border: 0 none; box-shadow: none; margin: 0; padding: 0; opacity: 0.9; }
 #wrapper-content .mod__categories .thumbnail:hover { opacity: inherit; }
@@ -117,8 +117,8 @@ img, img:hover, img:focus { outline: none; }
 #wrapper-content .mod__products .row .mod__products_header { padding: 38px 60px 0; color: #8fca00; }
 #wrapper-content .mod__products .row .mod__products_header h3 { font-weight: 200; }
 #wrapper-content .mod__products .row .mod__products_section .mod__products_section_description { border: 1px solid #f0f0f0; }
-#wrapper-content .mod__products .row .mod__products_section .mod__products_section_description h5 { color: #888; font-weight: 200; }
-#wrapper-content .mod__products .row .mod__products_section .mod__products_section_description p { margin-top: 6px; min-height: 2.7em; font-weight: 300; }
+#wrapper-content .mod__products .row .mod__products_section .mod__products_section_description h5 { color: #888; }
+#wrapper-content .mod__products .row .mod__products_section .mod__products_section_description p { margin-top: 6px; min-height: 2.7em; }
 #wrapper-content .mod__products .row .mod__products_section .mod__products_section_description .mod__products_content_price_promo_product--red p { color: #e4022d; }
 #wrapper-content .mod__products .row .mod__products_section .mod__products_section_description .mod__products_content_price_promo_product--red span { color: black; }
 #wrapper-content .mod__products .row .mod__products_section .mod__products_section_description .mod__products_content_price_normal_product p { padding-bottom: 6px; }
@@ -134,35 +134,5 @@ img, img:hover, img:focus { outline: none; }
 #wrapper-content .mod__brands .row .mod__brands_brands .mod__brands_brand_description .mod__brands_img img { max-width: 100%; opacity: .5; -webkit-transition: all .3s ease; transition: all .3s ease; }
 #wrapper-content .mod__brands .row .mod__brands_brands .mod__brands_brand_description .mod__brands_img img:hover { opacity: inherit; }
 #wrapper-content .mod__brands .row .mod__brands_footer { padding: 20px 60px 15px; }
-#wrapper-content .mod__brands .row .mod__brands_footer h5 { font-weight: 200; }
 #wrapper-content .mod__trends { padding-top: 20px; }
-#wrapper-content .mod__trends .row .mod__trends_content_header { background-color: white; border-bottom: 2px solid #f0f0f0; padding-bottom: 10px; }
-#wrapper-content .mod__trends .row .mod__trends_content_header h4 { color: black; font-weight: 200; }
-#wrapper-content .mod__trends .row .mod__trends_content_header h4 span { color: #8fca00; }
-#wrapper-content .mod__trends .row .mod__trends_content--relative { position: relative; }
-#wrapper-content .mod__trends .row .mod__trends_content--absolute { background-color: white; padding: 20px; position: absolute; right: 80px; top: 20px; width: 100%; border-bottom: 4px solid #8fca00; }
-#wrapper-content .mod__trends .row .mod__trends_content--absolute #diamond { width: 0; height: 0; border: 20px solid transparent; border-bottom-color: #8fca00; position: relative; top: 40px; left: -40px; }
-#wrapper-content .mod__trends .row .mod__trends_content--absolute #diamond:after { content: ''; position: absolute; left: -20px; top: 20px; width: 0; height: 0; border: 20px solid transparent; border-top-color: #8fca00; }
-#wrapper-content .mod__trends .row .mod__trends_content--absolute .mod__trends_content_description { padding: 15px 0px; }
-#wrapper-content .mod__trends .row .mod__trends_content--absolute .mod__trends_content_description p { padding: 15px 0px; font-weight: 300; }
-#wrapper-content .mod__trends .row .mod__trends_content--absolute .mod__trends_content_description button { background-color: black; color: white; width: 100%; font-weight: 200; padding: 10px 100px; }
-#wrapper-content .mod__cards { padding-top: 5px; }
-#wrapper-content .mod__cards .row { background-color: white; }
-#wrapper-content .mod__cards .row .mod__cards_row .mod__cards_description_head { padding: 15px; }
-#wrapper-content .mod__cards .row .mod__cards_row .mod__cards_description_head h6 { font-weight: 700; letter-spacing: .075em; text-transform: uppercase; font-size: 0.8rem; }
-#wrapper-content .mod__cards .row .mod__cards_row .mod__cards_description_content { padding: 15px; }
-#wrapper-content .mod__cards .row .mod__cards_row .mod__cards_description_content p { font-family: Droid Serif,serif; font-weight: 400; font-style: italic; }
-#wrapper-content .mod__cards .row .mod__cards_row .mod__cards_description_link { padding: 15px; }
-#wrapper-content .mod__cards .row .mod__cards_row .mod__cards_description_link button { background-color: white; font-weight: 100; }
-#wrapper-content .mod__cards .row .mod__cards_row .mod__cards_description_link button span { font-weight: bolder; }
-#wrapper-content .mod__cards .row .mod__cards_row .mod__card_content { border: 1px solid #f0f0f0; padding: 0px; }
-#wrapper-content .mod__cards .row .mod__cards_row .mod__card_content--left { padding-left: 1px; }
-#wrapper-content .mod__cards .row .mod__cards_row .mod__card_content--right { padding-right: 1px; }
-
-.mod__footer { padding-top: 20px; background-image: url(); }
-.mod__footer .row { background-color: black; }
-.mod__footer .row .line { border-bottom: 2px solid #8fca00; margin-bottom: 2px; }
-.mod__footer .row .line .line2 { border-bottom: 2px solid #8fca00; margin-bottom: 2px; }
-.mod__footer .row .line .line2 .line3 { border-bottom: 2px solid #8fca00; margin-bottom: 2px; }
-.mod__footer .row .line .line2 .line3 h2 { color: white; }
-.mod__footer .row .line .line2 .line3 span { color: #8fca00; }
+#wrapper-content .mod__trends .row { background-color: white; }
