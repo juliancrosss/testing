@@ -107,7 +107,7 @@ img, img:hover, img:focus { outline: none; }
 #wrapper-content .mod__nav .mod__nav_list ul a { color: white; font-weight: 200; text-decoration: none; }
 #wrapper-content .mod__nav .mod__nav_list .mod__nav_list--spacing li a { margin: 0 10px; }
 #wrapper-content .mod__header .caption { margin-left: auto; margin-right: auto; }
-#wrapper-content .mod__header .caption h2 { margin: auto; width: 10%; }
+#wrapper-content .mod__header .caption h2 { margin: auto; font-size: 5.9rem; }
 #wrapper-content .mod__header .thumbnail { border: 0 none; box-shadow: none; margin: 0; padding: 0; }
 #wrapper-content .mod__header .caption { width: 100%; bottom: .3rem; position: absolute; }
 #wrapper-content .mod__header .caption h2 { background-color: black; padding: 0 15px; color: white; -webkit-font-smoothing: antialiased; }
@@ -116,7 +116,7 @@ img, img:hover, img:focus { outline: none; }
 #wrapper-content .mod__categories .thumbnail { border: 0 none; box-shadow: none; margin: 0; padding: 0; opacity: 0.9; }
 #wrapper-content .mod__categories .thumbnail img { -webkit-filter: contrast(1); filter: contrast(1); }
 #wrapper-content .mod__categories .thumbnail:hover { opacity: inherit; }
-#wrapper-content .mod__categories .caption { width: 100%; bottom: 18rem; position: absolute; }
+#wrapper-content .mod__categories .caption { width: 100%; bottom: 10rem; position: absolute; }
 #wrapper-content .mod__categories .caption h2 { text-align: center; padding: 0 11px; color: white; -webkit-font-smoothing: antialiased; }
 #wrapper-content .mod__categories .caption p { color: white; text-align: center; }
 #wrapper-content .outfit { padding: 0; }
@@ -225,7 +225,7 @@ img, img:hover, img:focus { outline: none; }
 
 /* MOBILE QUERIES */
 @media only screen and (max-width: 767px) { #wrapper-content .mod__header .caption { margin-left: auto; margin-right: auto; }
-  #wrapper-content .mod__header .caption h2 { margin: auto; width: 42%; }
+  #wrapper-content .mod__header .caption h2 { margin: auto; font-size: 1.5rem; }
   #wrapper-content .mod__products .row .mod__products_footer .mod__products_footer_button { width: 30%; }
   #wrapper-content .mod__products .row .mod__products_footer .mod__products_footer_button button { min-width: 5px; font-size: 0.9rem; }
   #wrapper-content .mod__trends .row .mod__trends_content_consejos { padding: 0px; }

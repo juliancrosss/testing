@@ -96,7 +96,8 @@ img, img:hover, img:focus{outline: none;}
       margin-right: auto;
       h2{
         margin: auto;
-        width: 10%;
+        font-size: 5.9rem;
+        //width: 10%;
       }
     }
     .thumbnail{
@@ -143,7 +144,7 @@ img, img:hover, img:focus{outline: none;}
     }
     .caption {
       width:100%;
-      bottom: 18rem;
+      bottom: 10rem;
       position: absolute;
       h2 {
         text-align: center;
@@ -687,6 +688,7 @@ img, img:hover, img:focus{outline: none;}
   }
 }
 
+
 /* MOBILE QUERIES */
 @include screen-small{
   #wrapper-content{
@@ -696,7 +698,8 @@ img, img:hover, img:focus{outline: none;}
         margin-right: auto;
         h2{
           margin: auto;
-          width: 42%;
+          //width: 42%;
+          font-size: 1.5rem;
         }
       }
     }

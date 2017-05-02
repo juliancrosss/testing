@@ -640,25 +640,25 @@
                 nextArrow: ".nav-slick-next"
             })
 
-            $('#mod__cards_row').slick({
-						autoplay: true,
-						arrows: false,
-						autoplaySpeed: 4000,
-						dots: true,
-						slidesToShow: 4,
-						slidesToScroll: 4,
-						pauseOnHover: true,
-						responsive: [
-						{
-							breakpoint: 640,
-							settings: {
-								dots: true,
-								slidesToShow: 2,
-								slidesToScroll: 2
+            $('div#mod__cards_row').slick({
+							autoplay: true,
+							arrows: false,
+							autoplaySpeed: 4000,
+							dots: true,
+							slidesToShow: 2,
+							slidesToScroll: 2,
+							pauseOnHover: true,
+							responsive: [
+							{
+								breakpoint: 640,
+								settings: {
+									dots: true,
+									slidesToShow: 1,
+									slidesToScroll: 1
+								}
 							}
-						}
-						]
-					});
+							]
+						});
 
             $("#range-prices li a").click(function(e) {
                 e.preventDefault();
