@@ -119,6 +119,7 @@ img, img:hover, img:focus { outline: none; }
 #wrapper-content .mod__categories .caption { width: 100%; bottom: 18rem; position: absolute; }
 #wrapper-content .mod__categories .caption h2 { text-align: center; padding: 0 11px; color: white; -webkit-font-smoothing: antialiased; }
 #wrapper-content .mod__categories .caption p { color: white; text-align: center; }
+#wrapper-content .outfit { padding: 0; }
 #wrapper-content .mod__carrusel { overflow: hidden; }
 #wrapper-content .mod__carrusel .header { padding: 35px 40px 0; margin-bottom: 25px; }
 #wrapper-content .mod__carrusel .header h5 { font-family: "Lato"; font-size: 18px; font-weight: 300; margin: 0; }
@@ -179,14 +180,14 @@ img, img:hover, img:focus { outline: none; }
 #wrapper-content .mod__products .row .mod__products_footer .mod__products_footer_button button { margin-bottom: 20px; min-width: 140px; background: #f9f9f9; color: #bbb; }
 #wrapper-content .mod__brands { padding-top: 20px; }
 #wrapper-content .mod__brands .row { background-color: white; }
-#wrapper-content .mod__brands .row .mod__brands_header { padding: 25px 60px 10px; color: #8fca00; }
-#wrapper-content .mod__brands .row .mod__brands_header h3 { font-weight: 200; }
+#wrapper-content .mod__brands .row .mod__brands_header { padding: 25px 10px 10px; color: #8fca00; }
+#wrapper-content .mod__brands .row .mod__brands_header h5 { font-family: "Lato"; font-weight: 200; color: #333; font-size: 24px; font-weight: 300; letter-spacing: 1px; }
 #wrapper-content .mod__brands .row .mod__brands_brands .mod__brands_brand_description { border: 1px solid #f0f0f0; width: 50%; height: 50%; }
 #wrapper-content .mod__brands .row .mod__brands_brands .mod__brands_brand_description .mod__brands_img a { background-color: transparent; }
 #wrapper-content .mod__brands .row .mod__brands_brands .mod__brands_brand_description .mod__brands_img img { max-width: 100%; opacity: .5; -webkit-transition: all .3s ease; transition: all .3s ease; }
 #wrapper-content .mod__brands .row .mod__brands_brands .mod__brands_brand_description .mod__brands_img img:hover { opacity: inherit; }
 #wrapper-content .mod__brands .row .mod__brands_footer { padding: 20px 60px 15px; }
-#wrapper-content .mod__brands .row .mod__brands_footer h5 { font-weight: 200; font-size: 1rem; }
+#wrapper-content .mod__brands .row .mod__brands_footer h5 { font-weight: 600; font-size: 1rem; }
 #wrapper-content .mod__brands .row .mod__brands_footer h5 i { font-weight: 100; font-size: 0.9rem; }
 #wrapper-content .mod__trends { padding-top: 20px; }
 #wrapper-content .mod__trends .row .align-self-center { padding: 0px; }

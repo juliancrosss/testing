@@ -211,7 +211,7 @@
   	<!-- products -->
   	<div class="container">
   		<div class="row">
-  			<div class="col-xs-12 col-md-12">
+  			<div class="col-xs-12 col-md-12 outfit">
 			  	<section class="mod__carrusel mod__selers clearfix">
 						<div class="header">
 					  	<h5>Establece tu outfit</h5>  
@@ -365,7 +365,7 @@
   				<div class="col-xs-12 col-md-12">
   					<div class="row mod__brands_header">
   						<div class="col-xs-12 col-md-12">
-  							<h3>Marcas destacadas</h3>
+  							<h5>Marcas destacadas</h5>
   						</div>
   					</div>
 
@@ -476,7 +476,7 @@
   		<div class="container">
   			<div class="row">
   				<div class="col-xs-12 col-md-12">
-  					<div class="row mod__cards_row">
+  					<div class="row mod__cards_row" id="mod__cards_row">
 
   						<div class="col-xs-6 col-md-3 mod__card_content">
   							<div class="mod__cards_head">
@@ -561,6 +561,7 @@
   								</div>
   							</div>
   						</div>
+
   					</div>
   				</div>
   			</div>
@@ -638,6 +639,26 @@
                 prevArrow: ".nav-slick-prev",
                 nextArrow: ".nav-slick-next"
             })
+
+            $('#mod__cards_row').slick({
+						autoplay: true,
+						arrows: false,
+						autoplaySpeed: 4000,
+						dots: true,
+						slidesToShow: 4,
+						slidesToScroll: 4,
+						pauseOnHover: true,
+						responsive: [
+						{
+							breakpoint: 640,
+							settings: {
+								dots: true,
+								slidesToShow: 2,
+								slidesToScroll: 2
+							}
+						}
+						]
+					});
 
             $("#range-prices li a").click(function(e) {
                 e.preventDefault();

@@ -157,6 +157,9 @@ img, img:hover, img:focus{outline: none;}
       }
     }
   }
+  .outfit{
+    padding: 0;
+  }
   .mod__carrusel{
     overflow: hidden;
     .header{
@@ -481,10 +484,15 @@ img, img:hover, img:focus{outline: none;}
     .row{
       background-color: white;
       .mod__brands_header{
-        padding: 25px 60px 10px;
+        padding: 25px 10px 10px;
         color: #8fca00;
-        h3{
+        h5{
+          font-family: "Lato";
           font-weight: 200;
+          color: #333;
+          font-size: 24px;
+          font-weight: 300;
+          letter-spacing: 1px;
         }
       }
       .mod__brands_brands{
@@ -510,7 +518,7 @@ img, img:hover, img:focus{outline: none;}
       .mod__brands_footer{
         padding: 20px 60px 15px;
         h5{
-          font-weight: 200;
+          font-weight: 600;
           font-size: 1rem;
           i{
             font-weight: 100;
