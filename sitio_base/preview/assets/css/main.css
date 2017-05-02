@@ -104,8 +104,10 @@ img, img:hover, img:focus { outline: none; }
 
 #wrapper-content { /* Full height */ height: 100%; /* Create the parallax scrolling effect */ padding-bottom: 40px; padding-top: 30px; }
 #wrapper-content .mod__nav { background-color: black; color: white; position: relative; width: 100%; padding-top: 10px; font-weight: 200; }
-#wrapper-content .mod__nav .mod__nav_list ul a { color: white; font-weight: 200; }
+#wrapper-content .mod__nav .mod__nav_list ul a { color: white; font-weight: 200; text-decoration: none; }
 #wrapper-content .mod__nav .mod__nav_list .mod__nav_list--spacing li a { margin: 0 10px; }
+#wrapper-content .mod__header .caption { margin-left: auto; margin-right: auto; }
+#wrapper-content .mod__header .caption h2 { margin: auto; width: 10%; }
 #wrapper-content .mod__header .thumbnail { border: 0 none; box-shadow: none; margin: 0; padding: 0; }
 #wrapper-content .mod__header .caption { width: 100%; bottom: .3rem; position: absolute; }
 #wrapper-content .mod__header .caption h2 { background-color: black; padding: 0 15px; color: white; -webkit-font-smoothing: antialiased; }
@@ -117,6 +119,41 @@ img, img:hover, img:focus { outline: none; }
 #wrapper-content .mod__categories .caption { width: 100%; bottom: 18rem; position: absolute; }
 #wrapper-content .mod__categories .caption h2 { text-align: center; padding: 0 11px; color: white; -webkit-font-smoothing: antialiased; }
 #wrapper-content .mod__categories .caption p { color: white; text-align: center; }
+#wrapper-content .mod__carrusel { overflow: hidden; }
+#wrapper-content .mod__carrusel .header { padding: 35px 40px 0; margin-bottom: 25px; }
+#wrapper-content .mod__carrusel .header h5 { font-family: "Lato"; font-size: 18px; font-weight: 300; margin: 0; }
+#wrapper-content .mod__carrusel .header h5 span { color: #8fca00; background: transparent url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAACCAYAAAB7Xa1eAAAAFklEQVR4AWPoP8VwGIQZ0ABM4gi6OAAXHghyOgg+GgAAAABJRU5ErkJggg==") repeat-x scroll left bottom; padding-bottom: 3px; }
+#wrapper-content .mod__carrusel .footer { padding: 0 0 20px; margin: 0; }
+#wrapper-content .mod__carrusel .footer a { background-color: #aad500; color: #fff; display: block; font-size: 12px; font-weight: 400; letter-spacing: 1.2px; padding: 15px 0; text-align: center; text-decoration: none; text-transform: uppercase; width: 100%; }
+#wrapper-content .mod__carrusel .mod__carrusel_inner { border-bottom: 1px solid #d0d0d0 /*border-top: 1px solid #d0d0d0;*/ }
+#wrapper-content .mod__carrusel .mod__carrusel_inner .slick-list { -webkit-transform: translate3d(0px, 0px, 0px); -ms-transform: translate3d(0px, 0px, 0px); transform: translate3d(0px, 0px, 0px); }
+#wrapper-content .mod__carrusel .mod__carrusel_inner .slick-list::before { background-color: #d0d0d0; bottom: 0; content: ""; height: 470px; left: 0; position: absolute; top: 0; width: 1px; z-index: 10; }
+#wrapper-content .mod__carrusel .mod__carrusel_inner .slick-list::after { background-color: #d0d0d0; bottom: 0; content: ""; height: 470px; right: 0; position: absolute; top: 0; width: 1px; z-index: 10; }
+#wrapper-content .mod__carrusel .mod__carrusel_inner .slick-dots { bottom: -65px; display: block; margin: 0 auto; left: 0; right: 0; padding: 0; text-align: center; }
+#wrapper-content .mod__carrusel .mod__carrusel_inner .slick-dots li button { background-color: #e0e0e0; height: 8px; padding: 0; width: 8px; border: 1px solid transparent; border-radius: 50%; margin: 0 2px; }
+#wrapper-content .mod__carrusel .mod__carrusel_inner .slick-dots li.slick-active button { background-color: #888; height: 9px; width: 9px; border-color: #fff; }
+#wrapper-content .mod__carrusel .mod__carrusel_inner .product-slide { height: auto; }
+#wrapper-content .mod__carrusel .mod__carrusel_inner .product-slide a { display: block; border-left: 1px solid #d0d0d0; text-decoration: none; }
+#wrapper-content .mod__carrusel .mod__carrusel_inner .product-slide a .img-prod { margin-bottom: 6px; position: relative; background-color: #fff; padding: 15px; }
+#wrapper-content .mod__carrusel .mod__carrusel_inner .product-slide a .img-prod img { width: 90%; margin: auto; -webkit-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out; }
+#wrapper-content .mod__carrusel .mod__carrusel_inner .product-slide a .detail { padding: 10px 20px; min-height: 180px; position: relative; background-color: #F8F8F8; }
+#wrapper-content .mod__carrusel .mod__carrusel_inner .product-slide a .detail .marca { color: #888888; font-size: 12px; font-weight: 700; margin-bottom: 12px; padding: 0; text-transform: uppercase; }
+#wrapper-content .mod__carrusel .mod__carrusel_inner .product-slide a .detail .descripcion { color: #333333; display: block; font-size: 14px; font-weight: 400; height: 35px; margin-bottom: 14px; overflow: hidden; padding: 0; }
+#wrapper-content .mod__carrusel .mod__carrusel_inner .product-slide a .detail .price { margin-bottom: 25px; position: relative; }
+#wrapper-content .mod__carrusel .mod__carrusel_inner .product-slide a .detail .price h3, #wrapper-content .mod__carrusel .mod__carrusel_inner .product-slide a .detail .price h4 { display: block; font-weight: 400; margin: 0; }
+#wrapper-content .mod__carrusel .mod__carrusel_inner .product-slide a .detail .price h3 { color: #e4022d; font-size: 16px; font-weight: 400; margin: 10px 0; }
+#wrapper-content .mod__carrusel .mod__carrusel_inner .product-slide a .detail .price h4.internet { font-size: 14px; color: #333; }
+#wrapper-content .mod__carrusel .mod__carrusel_inner .product-slide a .detail .price h4.normal { font-size: 12px; line-height: 1.6; color: #bbbbbb; }
+#wrapper-content .mod__carrusel .mod__carrusel_inner .product-slide a .detail .price h3.cmr { padding-top: 5px; }
+#wrapper-content .mod__carrusel .mod__carrusel_inner .product-slide a .detail .price h3.cmr::after { content: ''; height: 35px; width: 25px; position: absolute; background: url(http://www.falabella.com.co/static/site/common/sprite-internos.png) no-repeat 0 0 transparent; background-position: -34px 0px; top: -9px; }
+#wrapper-content .mod__carrusel .mod__carrusel_inner .product-slide a .detail .more { background-color: #bbbbbb; bottom: 0; color: #fff; display: block; font-size: 12px; font-weight: 700; left: 0; letter-spacing: 1.2px; opacity: 0; padding: 10px 0; position: absolute; text-align: center; text-decoration: none; text-transform: uppercase; width: 100%; -webkit-transition: all 0.1s ease-out; transition: all 0.1s ease-out; }
+#wrapper-content .mod__carrusel .mod__carrusel_inner .product-slide a:hover .img-prod img { -webkit-transform: scale(1.025); -ms-transform: scale(1.025); transform: scale(1.025); }
+#wrapper-content .mod__carrusel .mod__carrusel_inner .product-slide a:hover .detail .more { opacity: 1; }
+#wrapper-content .mod__selers { background-color: #fff; margin-bottom: 30px; margin-top: 30px; padding-bottom: 30px; }
+#wrapper-content .mod__selers .header { padding: 20px; margin-bottom: 0; }
+#wrapper-content .mod__selers .header h5 { color: #333; font-size: 24px; font-weight: 300; letter-spacing: 1px; }
+#wrapper-content .mod__selers .mod__carrusel_inner { border-top: 1px solid #d0d0d0; }
+#wrapper-content .mod__selers .mod__carrusel_inner .slick-dots { bottom: -22px; }
 #wrapper-content .mod__products { padding-top: 20px; }
 #wrapper-content .mod__products .row { background-color: white; }
 #wrapper-content .mod__products .row .mod__products_header { padding: 25px 60px 10px; color: #8fca00; }
@@ -186,7 +223,9 @@ img, img:hover, img:focus { outline: none; }
 .mod__footer .row .line .line2 .line3 span { color: #8fca00; }
 
 /* MOBILE QUERIES */
-@media only screen and (max-width: 767px) { #wrapper-content .mod__products .row .mod__products_footer .mod__products_footer_button { width: 30%; }
+@media only screen and (max-width: 767px) { #wrapper-content .mod__header .caption { margin-left: auto; margin-right: auto; }
+  #wrapper-content .mod__header .caption h2 { margin: auto; width: 42%; }
+  #wrapper-content .mod__products .row .mod__products_footer .mod__products_footer_button { width: 30%; }
   #wrapper-content .mod__products .row .mod__products_footer .mod__products_footer_button button { min-width: 5px; font-size: 0.9rem; }
   #wrapper-content .mod__trends .row .mod__trends_content_consejos { padding: 0px; }
   #wrapper-content .mod__trends .row div.mod__trends_content.mod__trends_content--absolute { width: 100%; }

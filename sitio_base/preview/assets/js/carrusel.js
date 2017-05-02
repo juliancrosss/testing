@@ -13,6 +13,7 @@ $(document).ready(function(){
 			data: {'apikey': 'a02506b31c1cd46c2e0b6380fb94eb3d', 'productId': aryBox0},
 			method: 'get',
 			success: function(data){
+				console.log(data);
 				var k = 1;
 				for(var j=0; j < data.length; j++){
 					if(data[j].published === true && data[j].status === 'OK'){

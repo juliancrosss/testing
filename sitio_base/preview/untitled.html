@@ -172,6 +172,7 @@
   		</div>
   	</header>
   	<!-- /.end header -->
+
   	<!-- categories -->
   	<section class="mod__categories">
   		<div class="container">
@@ -208,14 +209,8 @@
   		</div>
   	</section>
   	<!--/. end categories -->
+
   	<!-- products -->
-  	<section class="mod__carrusel mod__selers clearfix">
-			<div class="header">
-		  	<h5>Establece tu outfit</h5>  
-		   </div>
-		  <div class="mod__carrusel_inner" id="carruselBox0"></div>
-		</section>
-		
   	<section class="mod__products">
   		<div class="container">
   			<div class="row">
@@ -560,6 +555,7 @@
   			</div>
   		</div>
   	</section>
+
   </main>
   <!-- /. END MAIN -->
 
@@ -576,218 +572,40 @@
   						</div>
   					</div>
   				</div>
+  				
   			</div>
   		</div>
-  </footer>
-  <!-- /. end Footer -->
-
-  <div id="fb-root"></div>
-    <script src="assets/js/jquery/jquery.min.js" type="text/javascript"></script>
-    <script src="assets/js/cabezote.js" type="text/javascript"></script>
-    <script src="assets/js/slick.min.js" type="text/javascript"></script>
-    <script src="assets/js/carrusel.js" type="text/javascript"></script>
-    <script src="assets/js/remodal/remodal.min.js" type="text/javascript"></script>
-    <script type="text/javascript" src="http://www.falabella.com.co/static/script/content/dynprice.min.js"></script>
-    <script src="assets/js/share.js" type="text/javascript"></script>
-    <script>
-        $(document).ready(function(){
-
-            $.dynprice({
-                debug: false,
-                country: 'faco',
-                addCurrency: true
-            });
-
-            $('#mod__brands_slider').slick({
-                autoplay: true,
-                dots: false,
-                slidesToShow: 7,
-                slidesToScroll: 7,
-                arrows: true,
-                prevArrow: '.arrow-prev',
-                nextArrow: '.arrow-next',
-                responsive: [
-                {
-                    breakpoint: 640,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 2
-                    }
-                }
-                ]
-            });
-
-            $("#slider-tallas .wrapper-tallas").slick({
-                autoplay: true,
-                autoplaySpeed: 3e3,
-                arrows: true,
-                centerMode: true,
-                centerPadding: "-2px",
-                dots: false,
-                initialSlide: 0,
-                infinite: true,
-                slidesToShow: 7,
-                slidesToScroll: 1,
-                pauseOnHover: false,
-                prevArrow: ".nav-slick-prev",
-                nextArrow: ".nav-slick-next"
-            })
-
-            $("#range-prices li a").click(function(e) {
-                e.preventDefault();
-                var box = $(this).data('box');
-
-                switch(box) {
-                    case 'carruselBox1':
-                        $('#range-copy').text('Precios increíbles en modelos que te encantarán. Conócelos y lleva todos los que quieras.');
-                        $('#range-all').attr('href', 'http://www.falabella.com.co/falabella-co/category/cat5531047/menor-a-99990?navAction=push');
-                        $('#range-img').attr('src', 'assets/recursos/precios/precios_90.png');
-                    break;
-                    case 'carruselBox2':
-                        $('#range-copy').text('Funcionalidad y diseño combinados a la perfección. ¡No te quedes sin ese par que tanto quieres!');
-                        $('#range-all').attr('href', 'http://www.falabella.com.co/falabella-co/category/cat5531048/100.000-a-149.990?navAction=push');
-                        $('#range-img').attr('src', 'assets/recursos/precios/precios_100-149.png');
-                    break;
-                    case 'carruselBox3':
-                        $('#range-copy').text('Para los que van más allá. ¡Enamórate de todo lo que tenemos para ti!');
-                        $('#range-all').attr('href', 'http://www.falabella.com.co/falabella-co/category/cat5531049/');
-                        $('#range-img').attr('src', 'assets/recursos/precios/precios_150-199.png');
-                    break;
-                } 
-
-                $('#range-prices li a').removeClass('active');
-                $(this).addClass('active');
-                $('.mod__carrusel .mod__carrusel_inner').fadeOut(100, function(){
-                    $('#'+box).slick('slickGoTo', 0);
-                });
-
-                setTimeout(function(){
-                    $('#'+box).fadeIn(100);
-                }, 250);
-                console.log(box);
-            });
-
-            $('#genero-compra select').change(function() {
-                "mujer" == $(this).val() && $("#slider-tallas .wrapper-tallas").slick("slickGoTo", "0"), 
-                "hombre" == $(this).val() && $("#slider-tallas .wrapper-tallas").slick("slickGoTo", "9");
-            })
-
-            $("#compra-tallas").on("click", function(e) {
-                e.preventDefault();
-
-                var genero = $('#genero-compra select').val()
-                var talla = $("#slider-tallas .talla-slide.slick-center").data("talla");
-
-                switch (genero) {
-
-                    case "mujer":
-                    36 === talla && window.open("http://www.falabella.com.co/falabella-co/category/cat1031787/Tenis-Mujer/N-1z1369wZ1z1406eZ1z140g9Z1z140mtZ1z1415jZ1z1406f", "_blank"), 
-                    37 === talla && window.open("http://www.falabella.com.co/falabella-co/category/cat1031787/Tenis-Mujer/N-1z12xavZ1z13zshZ1z140g9Z1z140msZ1z1415hZ1z1406e", "_blank"), 
-                    38 === talla && window.open("http://www.falabella.com.co/falabella-co/category/cat1031787/Tenis-Mujer/N-1z12xauZ1z13dj5Z1z13zshZ1z1412gZ1z141j3Z1z140ms", "_blank"), 
-                    39 === talla && window.open("http://www.falabella.com.co/falabella-co/category/cat1031787/Tenis-Mujer/N-1z12xatZ1z12xauZ1z13dj5Z1z141ooZ1z141orZ1z141oq", "_blank"), 
-                    40 === talla && window.open("http://www.falabella.com.co/falabella-co/category/cat1031787/Tenis-Mujer/N-1z12xasZ1z13m0hZ1z141ooZ1z141opZ1z12xat", "_blank"), 
-                    41 === talla && window.open("http://www.falabella.com.co/falabella-co/category/cat1031787/Tenis-Mujer/N-1z13dj2Z1z141j1Z1z141ooZ1z141otZ1z12xas", "_blank"), 
-                    42 === talla && window.open("http://www.falabella.com.co/falabella-co/category/cat1031787/Tenis-Mujer/N-1z140rgZ1z140wfZ1z141j1Z1z13dj2", "_blank"), 
-                    43 === talla && window.open("http://www.falabella.com.co/falabella-co/category/cat1031787/Tenis-Mujer/N-1z131taZ1z140weZ1z140rg", "_blank"), 
-                    44 === talla && window.open("http://www.falabella.com.co/falabella-co/category/cat1031787/Tenis-Mujer/N-1z13zliZ1z140eiZ1z131ta ", "_blank");
-                    break;
-                    case "hombre":
-                    37 === talla && window.open("http://www.falabella.com.co/falabella-co/category/cat731023/Tenis-Hombre/N-1z1369wZ1z1406fZ1z140g9Z1z140msZ1z1415hZ1z1406e", "_blank"), 
-                    38 === talla && window.open("http://www.falabella.com.co/falabella-co/category/cat731023/Tenis-Hombre/N-1z1406eZ1z140msZ1z1412gZ1z141j3Z1z12xav", "_blank"), 
-                    39 === talla && window.open("http://www.falabella.com.co/falabella-co/category/cat731023/Tenis-Hombre/N-1z12xauZ1z141j3Z1z141oqZ1z141orZ1z13zsh", "_blank"), 
-                    40 === talla && window.open("http://www.falabella.com.co/falabella-co/category/cat731023/Tenis-Hombre/N-1z12xauZ1z13dj5Z1z141ooZ1z141opZ1z141oqZ1z12xat", "_blank"), 
-                    41 === talla && window.open("http://www.falabella.com.co/falabella-co/category/cat731023/Tenis-Hombre/N-1z13m0hZ1z141j1Z1z141ooZ1z141otZ1z12xat", "_blank"), 
-                    42 === talla && window.open("http://www.falabella.com.co/falabella-co/category/cat731023/Tenis-Hombre/N-1z13m0hZ1z140rgZ1z140wfZ1z141j1Z1z12xas", "_blank"), 
-                    43 === talla && window.open("http://www.falabella.com.co/falabella-co/category/cat731023/Tenis-Hombre/N-1z120pqZ1z131taZ1z140rgZ1z140weZ1z13dj2", "_blank"), 
-                    44 === talla && window.open("http://www.falabella.com.co/falabella-co/category/cat731023/Tenis-Hombre/N-1z11zouZ1z120pqZ1z13gg4Z1z13zliZ1z140eiZ1z131ta", "_blank");
-                    break;
-                }
-
-            })
-        })
-
-    </script>
-    <!-- SiteCatalyst code version: H.25.
-    Copyright 1996-2012 Adobe, Inc. All Rights Reserved
-    More info available at http://www.omniture.com -->
-    <script type="text/javascript" src="http://www.falabella.com.co/static/script/common/s_code.js?v4"></script>
-    <script type="text/javascript">
-        /* You may give each page an identifying name, server, and channel on
-        the next lines. */
-        s.pageName="ms_voycontenisypunto";
-        s.channel = "";
-        s.pageType="";
-        s.hier1="";
-        /* Conversion Variables */
-        s.campaign="";
-        s.events="";
-        s.state="";
-        s.zip="";
-        s.purchaseID="";
-        s.products="";
-        s.prop1="No Disponible";
-        s.prop4="";
-        s.eVar1= s.getQueryParam('cid');
-        s.eVar2= s.getQueryParam('sid');
-        s.eVar3= s.getQueryParam('kid');
-        s.eVar4= s.getQueryParam('eid');
-        /************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
-        var s_code=s.t();if(s_code)document.write(s_code);</script>
-    <noscript> <img src="https://falabella.122.2o7.net/b/ss/flblacomco/1/H.21--NS/0?[AQB]&cdp=3&[AQE]" height="1" width="1" border="0" alt="" /> </noscript><!--/DO NOT REMOVE/-->
-    <!-- End SiteCatalyst code version: H.25. -->   
-    <!-- === Google Code for Remarketing Tag === -->
-    <!-- Remarketing tags may not be associated with personally identifiable information or placed on pages related to sensitive categories. See more information and instructions on how to setup the tag on: http://google.com/ads/remarketingsetup -->
-    <script type="text/javascript">
-        /* <![CDATA[ */
-        var google_conversion_id = 991207851;
-        var google_custom_params = window.google_tag_params;
-        var google_remarketing_only = true;
-        /* ]]> */
-    </script>
-    <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
-    </script>
-    <noscript>
-        <div style="display:inline;">
-            <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/991207851/?value=0&amp;guid=ON&amp;script=0"/>
-        </div>
-    </noscript>
-
-    <!-- ==== Facebook Pixel Code ==== -->
-    <script>
-        !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-        n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-        n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-        t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
-            document,'script','//connect.facebook.net/en_US/fbevents.js');
-
-        fbq('init', '1422778467972557');
-        fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1422778467972557&ev=PageView&noscript=1"/></noscript>
-    <!-- End Facebook Pixel Code -->
-    <!-- Criteo -->
-    <script type="text/javascript" src="//static.criteo.net/js/ld/ld.js" async="true"></script>
-    <script type="text/javascript">
-    window.criteo_q = window.criteo_q || [];
-    window.criteo_q.push(
-        { event: "setAccount", account: 13929 },
-        { event: "setHashedEmail", email: "" },
-        { event: "setSiteType", type: (/Mobile|iP(hone|od|ad)|Android|BlackBerry|IEMobile/.test(navigator.userAgent) ? "m" : "d") },
-        { event: "viewHome" },
-        { event: "viewSearch", ui_promo:"false" }
-        );
-    </script>
-    <!-- End Criteo -->
-    <!-- Twitter universal website tag code -->
-    <script>
-        !function(e,t,n,s,u,a){e.twq||(s=e.twq=function(){s.exe?s.exe.apply(s,arguments):s.queue.push(arguments);
-        },s.version='1',s.queue=[],u=t.createElement(n),u.async=!0,u.src='//static.ads-twitter.com/uwt.js',
-        a=t.getElementsByTagName(n)[0],a.parentNode.insertBefore(u,a))}(window,document,'script');
-        // Insert Twitter Pixel ID and Standard Event data below
-        twq('init','nut5v');
-        twq('track','PageView');
-    </script>
-    <!-- End Twitter universal website tag code -->
-
+  	</footer>
+  	<!-- /. end Footer -->
 </body>
+
+<header>
+  <div class="logo">
+    <a href="">
+      <img src="">
+    </a>
+  </div>
+
+  <div class="nav">
+    <ul class="nav__list">
+      <li>menu 1</li>
+      <li>menu 2</li>
+      <li>menu 3</li>
+      <li>menu 4</li>
+    </ul>
+  </div>
+
+  <div class="form-search">
+    <form class="form-search__form">
+      <input type="text" name="search">
+    </form>
+  </div>
+
+  <div class="auth">
+    <form class="auth__form">
+      <input type="text" name="username">
+      <input type="password" name="password">
+    </form>
+  </div>
+</header>
 </html>
